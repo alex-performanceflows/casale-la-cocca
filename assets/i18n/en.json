@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Casale La Cocca · Exclusive luxury villa · Itria Valley, Puglia",
-    "description": "A stone farmhouse in the Itria Valley, entirely yours. 5 en-suite suites, saltwater infinity pool, exclusive use. Between Cisternino and Ostuni — 20 minutes from the sea."
+    "description": "A stone farmhouse in the Itria Valley, entirely yours. 5 en-suite suites, saltwater infinity pool, exclusive use. Between Cisternino and Ostuni, 20 minutes from the sea."
   },
   "nav": {
     "overview": "The villa",
@@ -19,7 +19,7 @@
   "hero": {
     "eyebrow": "Itria Valley · Puglia",
     "title": "Casale La Cocca",
-    "subtitle": "Five suites, a pool on the horizon, a 1950s stone farmhouse. Just you — for as long as you want to stay.",
+    "subtitle": "Five suites, a pool on the horizon, a 1950s stone farmhouse. Just you, for as long as you want to stay.",
     "location": "In the countryside between Cisternino, Ostuni and Martina Franca",
     "cta": "Request availability",
     "scroll": "Scroll",
@@ -32,11 +32,10 @@
   "overview": {
     "eyebrow": "The villa",
     "title": "A farmhouse that teaches you to slow down",
-    "body": "Set among the olive groves of Cisternino, restored by local craftsmen who kept everything: the limestone vaults, the traditional tiled floors, the walls that hold the cool of summer. Outside, a 14-metre infinity pool. Inside, five en-suite suites and spaces that ask nothing — except that you stay.",
+    "body": "Set among the olive groves of Cisternino, restored by local craftsmen who kept everything: the limestone vaults, the traditional tiled floors, the walls that hold the cool of summer. Outside, a 14-metre infinity pool. Inside, five en-suite suites and spaces that ask nothing, except that you stay.",
     "stats": {
       "guests": "Sleeps 10",
       "bedrooms": "5 en-suite suites",
-      "bathrooms": "5.5 bathrooms",
       "pool": "14 m infinity pool",
       "exclusive": "Exclusive use"
     }
@@ -60,14 +59,14 @@
   "spaces": {
     "eyebrow": "The spaces",
     "title": "Four ways to live the villa",
-    "subtitle": "The main stone house and three independent suites — each with its own en-suite bathroom, each with its own character.",
+    "subtitle": "The main stone house and three independent suites, each with its own en-suite bathroom, each with its own character.",
     "casale": {
       "name": "Main house",
-      "body": "The heart of the villa: stone vaults, a living room with fireplace, an open kitchen with original arches. Two master en-suite suites. The sitting room opens directly onto pool and garden — inside and outside blur together."
+      "body": "The heart of the villa: stone vaults, a living room with fireplace, an open kitchen with original arches. Two master en-suite suites. The sitting room opens directly onto pool and garden: inside and outside blur together."
     },
     "poolSuite": {
       "name": "Pool Suite",
-      "body": "Waking up with water in front of your eyes. Wide glass doors open onto the pool and garden — the distance from bed to water is measured in seconds. En-suite bathroom."
+      "body": "Waking up with water in front of your eyes. Wide glass doors open onto the pool and garden: the distance from bed to water is measured in seconds. En-suite bathroom."
     },
     "gardenSuite": {
       "name": "Garden Suite",
@@ -81,7 +80,7 @@
   "outdoors": {
     "eyebrow": "Outdoors & pool",
     "title": "Water, olive trees, sky",
-    "body": "The 14×4-metre saltwater infinity pool has no edge — it has a horizon. Around it: a sun deck with loungers, a fully equipped outdoor kitchen for sunset dinners, a gas barbecue, and centuries-old olive trees that cast shade without asking permission.",
+    "body": "The 14×4-metre saltwater infinity pool has no edge, it has a horizon. Around it: a sun deck with loungers, a fully equipped outdoor kitchen for sunset dinners, a gas barbecue, and centuries-old olive trees that cast shade without asking permission.",
     "features": {
       "pool": "14×4 m saltwater infinity pool",
       "solarium": "Panoramic sun deck with loungers",
@@ -130,22 +129,22 @@
     "mapAlt": "Map of Casale La Cocca's location in the Itria Valley, between Cisternino and Ostuni",
     "distances": {
       "title": "Distances",
-      "cisternino": "Cisternino — 3 km · 5 min",
-      "martinaFranca": "Martina Franca — 7 km · 8 min",
-      "locorotondo": "Locorotondo — 9 km · 14 min",
-      "ostuni": "Ostuni — 18 km · 20 min",
-      "alberobello": "Alberobello — 18 km · 25 min",
-      "polignano": "Polignano a Mare — 41 km · 44 min",
-      "beach": "Beach (Torre Canne) — 20 km · 25 min",
-      "golf": "Golf (Savelletri) — 27 km · 33 min",
-      "brindisi": "Brindisi Airport — 57 km · 53 min",
-      "bari": "Bari Airport — 93 km · 73 min"
+      "cisternino": "Cisternino → 3 km · 5 min",
+      "martinaFranca": "Martina Franca → 7 km · 8 min",
+      "locorotondo": "Locorotondo → 9 km · 14 min",
+      "ostuni": "Ostuni → 18 km · 20 min",
+      "alberobello": "Alberobello → 18 km · 25 min",
+      "polignano": "Polignano a Mare → 41 km · 44 min",
+      "beach": "Beach (Torre Canne) → 20 km · 25 min",
+      "golf": "Golf (Savelletri) → 27 km · 33 min",
+      "brindisi": "Brindisi Airport → 57 km · 53 min",
+      "bari": "Bari Airport → 93 km · 73 min"
     }
   },
   "contact": {
     "eyebrow": "Start planning",
     "title": "Got the dates in mind?",
-    "subtitle": "Tell us when you'd like to come. We'll reply within 24 hours with availability and pricing — no commitment needed.",
+    "subtitle": "Tell us when you'd like to come. We'll reply within 24 hours with availability and pricing, no commitment needed.",
     "form": {
       "name": "Full name",
       "email": "Email",
@@ -185,16 +184,16 @@
   "testimonials": {
     "eyebrow": "What guests say",
     "t1": {
-      "text": "\"A week suspended in time. The infinity pool, the stone, the silence — everything speaks of a luxury that doesn't shout.\"",
-      "author": "— Family M., Milan · summer 2024"
+      "text": "\"A week suspended in time. The infinity pool, the stone, the silence, everything speaks of a luxury that doesn't shout.\"",
+      "author": "Family M., Milan · summer 2024"
     },
     "t2": {
-      "text": "\"We celebrated a milestone birthday here. The outdoor kitchen, the barbecue, the pool at sunset — it was perfect.\"",
-      "author": "— Group of friends, Rome · July 2024"
+      "text": "\"We celebrated a milestone birthday here. The outdoor kitchen, the barbecue, the pool at sunset: it was perfect.\"",
+      "author": "Group of friends, Rome · July 2024"
     },
     "t3": {
       "text": "\"The location is incredible: total quiet, but Martina Franca is ten minutes away. We'll be back.\"",
-      "author": "— Couple, London · September 2024"
+      "author": "Couple, London · September 2024"
     },
     "disclaimer": "Reviews collected from booking platforms. Names have been abbreviated for privacy."
   },

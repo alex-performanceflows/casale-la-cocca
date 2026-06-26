@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Casale La Cocca · Villa esclusiva · Valle d'Itria, Puglia",
-    "description": "Casale in pietra nella Valle d'Itria, solo per voi. 5 suite en-suite, piscina a sfioro salata, uso esclusivo. Tra Cisternino e Ostuni — a 20 minuti dal mare."
+    "description": "Casale in pietra nella Valle d'Itria, solo per voi. 5 suite en-suite, piscina a sfioro salata, uso esclusivo. Tra Cisternino e Ostuni, a 20 minuti dal mare."
   },
   "nav": {
     "overview": "La villa",
@@ -19,7 +19,7 @@
   "hero": {
     "eyebrow": "Valle d'Itria · Puglia",
     "title": "Casale La Cocca",
-    "subtitle": "Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi — per tutto il tempo che volete.",
+    "subtitle": "Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi, per tutto il tempo che volete.",
     "location": "Campagna tra Cisternino, Ostuni e Martina Franca",
     "cta": "Richiedi disponibilità",
     "scroll": "Scorri",
@@ -32,11 +32,10 @@
   "overview": {
     "eyebrow": "La villa",
     "title": "Un casale che insegna a rallentare",
-    "body": "Sorge tra gli ulivi di Cisternino, ristrutturato da artigiani locali che hanno conservato tutto: le volte in pietra calcarea, i pavimenti a mattonelle tradizionali, le pareti che tengono il fresco. Fuori, una piscina a sfioro lunga 14 metri. Dentro, cinque suite con bagno privato e spazi che non chiedono niente — tranne di stare.",
+    "body": "Sorge tra gli ulivi di Cisternino, ristrutturato da artigiani locali che hanno conservato tutto: le volte in pietra calcarea, i pavimenti a mattonelle tradizionali, le pareti che tengono il fresco. Fuori, una piscina a sfioro lunga 14 metri. Dentro, cinque suite con bagno privato e spazi che non chiedono niente, tranne di stare.",
     "stats": {
       "guests": "10 ospiti",
       "bedrooms": "5 suite en-suite",
-      "bathrooms": "5,5 bagni",
       "pool": "Piscina 14 m",
       "exclusive": "Uso esclusivo"
     }
@@ -60,14 +59,14 @@
   "spaces": {
     "eyebrow": "Gli spazi",
     "title": "Quattro modi di abitare la villa",
-    "subtitle": "La casa principale in pietra e tre suite indipendenti — ciascuna con il proprio bagno en-suite, ciascuna con il proprio carattere.",
+    "subtitle": "La casa principale in pietra e tre suite indipendenti, ciascuna con il proprio bagno en-suite, ciascuna con il proprio carattere.",
     "casale": {
       "name": "Casa principale",
-      "body": "Il cuore della villa: volte in pietra, soggiorno con camino, cucina a vista con archi originali. Due suite padronali en-suite. Il salone si apre direttamente su piscina e giardino — dentro e fuori si confondono."
+      "body": "Il cuore della villa: volte in pietra, soggiorno con camino, cucina a vista con archi originali. Due suite padronali en-suite. Il salone si apre direttamente su piscina e giardino: dentro e fuori si confondono."
     },
     "poolSuite": {
       "name": "Pool Suite",
-      "body": "Svegliarsi con l'acqua davanti agli occhi. Le grandi vetrate si aprono sulla piscina e sul giardino — la distanza tra il letto e l'acqua si misura in secondi. Bagno en-suite."
+      "body": "Svegliarsi con l'acqua davanti agli occhi. Le grandi vetrate si aprono sulla piscina e sul giardino: la distanza tra il letto e l'acqua si misura in secondi. Bagno en-suite."
     },
     "gardenSuite": {
       "name": "Garden Suite",
@@ -81,7 +80,7 @@
   "outdoors": {
     "eyebrow": "Esterni & piscina",
     "title": "L'acqua, gli ulivi, il cielo",
-    "body": "La piscina a sfioro salata da 14×4 metri non ha un bordo — ha un orizzonte. Intorno: solarium con lettini, cucina esterna attrezzata per cene al tramonto, barbecue a gas, doccia esterna. E ulivi vecchi di secoli che fanno ombra senza chiedere permesso.",
+    "body": "La piscina a sfioro salata da 14×4 metri non ha un bordo, ha un orizzonte. Intorno: solarium con lettini, cucina esterna attrezzata per cene al tramonto, barbecue a gas, doccia esterna. E ulivi vecchi di secoli che fanno ombra senza chiedere permesso.",
     "features": {
       "pool": "Piscina a sfioro salata 14×4 m",
       "solarium": "Solarium panoramico con lettini",
@@ -130,22 +129,22 @@
     "mapAlt": "Mappa della posizione di Casale La Cocca nella Valle d'Itria, tra Cisternino e Ostuni",
     "distances": {
       "title": "Distanze",
-      "cisternino": "Cisternino — 3 km · 5 min",
-      "martinaFranca": "Martina Franca — 7 km · 8 min",
-      "locorotondo": "Locorotondo — 9 km · 14 min",
-      "ostuni": "Ostuni — 18 km · 20 min",
-      "alberobello": "Alberobello — 18 km · 25 min",
-      "polignano": "Polignano a Mare — 41 km · 44 min",
-      "beach": "Spiaggia (Torre Canne) — 20 km · 25 min",
-      "golf": "Golf (Savelletri) — 27 km · 33 min",
-      "brindisi": "Aeroporto Brindisi — 57 km · 53 min",
-      "bari": "Aeroporto Bari — 93 km · 73 min"
+      "cisternino": "Cisternino → 3 km · 5 min",
+      "martinaFranca": "Martina Franca → 7 km · 8 min",
+      "locorotondo": "Locorotondo → 9 km · 14 min",
+      "ostuni": "Ostuni → 18 km · 20 min",
+      "alberobello": "Alberobello → 18 km · 25 min",
+      "polignano": "Polignano a Mare → 41 km · 44 min",
+      "beach": "Spiaggia (Torre Canne) → 20 km · 25 min",
+      "golf": "Golf (Savelletri) → 27 km · 33 min",
+      "brindisi": "Aeroporto Brindisi → 57 km · 53 min",
+      "bari": "Aeroporto Bari → 93 km · 73 min"
     }
   },
   "contact": {
     "eyebrow": "Inizia a pianificare",
     "title": "Hai le date in testa?",
-    "subtitle": "Raccontaci le vostre date. Vi risponderemo entro 24 ore con disponibilità e prezzi — senza impegno.",
+    "subtitle": "Raccontaci le vostre date. Vi risponderemo entro 24 ore con disponibilità e prezzi, senza impegno.",
     "form": {
       "name": "Nome e cognome",
       "email": "Email",
@@ -185,16 +184,16 @@
   "testimonials": {
     "eyebrow": "Chi ha soggiornato",
     "t1": {
-      "text": "\"Una settimana sospesa nel tempo. La piscina a sfioro, la pietra, il silenzio — tutto rimanda a un'idea di lusso che non grida.\"",
-      "author": "— Famiglia M., Milano · estate 2024"
+      "text": "\"Una settimana sospesa nel tempo. La piscina a sfioro, la pietra, il silenzio, tutto rimanda a un'idea di lusso che non grida.\"",
+      "author": "Famiglia M., Milano · estate 2024"
     },
     "t2": {
-      "text": "\"Abbiamo festeggiato un compleanno importante. La cucina esterna, il barbecue, la piscina al tramonto — è stato perfetto.\"",
-      "author": "— Gruppo di amici, Roma · luglio 2024"
+      "text": "\"Abbiamo festeggiato un compleanno importante. La cucina esterna, il barbecue, la piscina al tramonto: è stato perfetto.\"",
+      "author": "Gruppo di amici, Roma · luglio 2024"
     },
     "t3": {
       "text": "\"La posizione è incredibile: quiete assoluta, ma in dieci minuti sei a Martina Franca. Torneremo.\"",
-      "author": "— Coppia, Londra · settembre 2024"
+      "author": "Coppia, Londra · settembre 2024"
     },
     "disclaimer": "Testimonianze raccolte dalle piattaforme di prenotazione. I nomi sono stati abbreviati per privacy."
   },
