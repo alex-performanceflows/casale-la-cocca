@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "Casale La Cocca · Villa esclusiva · Valle d'Itria, Puglia",
+    "description": "Casale in pietra nella Valle d'Itria, solo per voi. 5 suite en-suite, piscina a sfioro salata, uso esclusivo. Tra Cisternino e Ostuni — a 20 minuti dal mare."
+  },
+  "nav": {
+    "overview": "La villa",
+    "gallery": "Galleria",
+    "spaces": "Gli spazi",
+    "outdoors": "Esterni & piscina",
+    "amenities": "Comfort",
+    "location": "Posizione",
+    "contact": "Contatti",
+    "availability": "Richiedi disponibilità",
+    "menuOpen": "Apri il menu",
+    "menuClose": "Chiudi il menu",
+    "langLabel": "Lingua"
+  },
+  "hero": {
+    "eyebrow": "Valle d'Itria · Puglia",
+    "title": "Casale La Cocca",
+    "subtitle": "Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi — per tutto il tempo che volete.",
+    "location": "Campagna tra Cisternino, Ostuni e Martina Franca",
+    "cta": "Richiedi disponibilità",
+    "scroll": "Scorri",
+    "imageAlt": "La piscina a sfioro di Casale La Cocca al tramonto, con il casale in pietra sullo sfondo"
+  },
+  "platforms": {
+    "label": "Disponibile su",
+    "verified": "struttura verificata"
+  },
+  "overview": {
+    "eyebrow": "La villa",
+    "title": "Un casale che insegna a rallentare",
+    "body": "Sorge tra gli ulivi di Cisternino, ristrutturato da artigiani locali che hanno conservato tutto: le volte in pietra calcarea, i pavimenti a mattonelle tradizionali, le pareti che tengono il fresco. Fuori, una piscina a sfioro lunga 14 metri. Dentro, cinque suite con bagno privato e spazi che non chiedono niente — tranne di stare.",
+    "stats": {
+      "guests": "10 ospiti",
+      "bedrooms": "5 suite en-suite",
+      "bathrooms": "5,5 bagni",
+      "pool": "Piscina 14 m",
+      "exclusive": "Uso esclusivo"
+    }
+  },
+  "pullquote": {
+    "text": "Il lusso vero non fa rumore. Fa luce.",
+    "attribution": "Valle d'Itria, Puglia"
+  },
+  "gallery": {
+    "eyebrow": "Galleria",
+    "title": "Pietra, luce, acqua",
+    "subtitle": "Fotografie d'autore degli spazi e della luce che li attraversa.",
+    "open": "Apri la galleria a schermo intero",
+    "close": "Chiudi",
+    "prev": "Immagine precedente",
+    "next": "Immagine successiva",
+    "counter": "{current} di {total}",
+    "showAll": "Vedi tutte le foto",
+    "showLess": "Chiudi galleria"
+  },
+  "spaces": {
+    "eyebrow": "Gli spazi",
+    "title": "Quattro modi di abitare la villa",
+    "subtitle": "La casa principale in pietra e tre suite indipendenti — ciascuna con il proprio bagno en-suite, ciascuna con il proprio carattere.",
+    "casale": {
+      "name": "Casa principale",
+      "body": "Il cuore della villa: volte in pietra, soggiorno con camino, cucina a vista con archi originali. Due suite padronali en-suite. Il salone si apre direttamente su piscina e giardino — dentro e fuori si confondono."
+    },
+    "poolSuite": {
+      "name": "Pool Suite",
+      "body": "Svegliarsi con l'acqua davanti agli occhi. Le grandi vetrate si aprono sulla piscina e sul giardino — la distanza tra il letto e l'acqua si misura in secondi. Bagno en-suite."
+    },
+    "gardenSuite": {
+      "name": "Garden Suite",
+      "body": "Porte che danno sul verde, luce che filtra tra gli ulivi. Suite al piano terra con accesso diretto al giardino. La Puglia entra nelle stanze. Bagno en-suite."
+    },
+    "firstFloorSuite": {
+      "name": "Suite al primo piano",
+      "body": "Scala esterna privata, terrazza tutta vostra. Dall'alto, il profilo degli ulivi e il blu della piscina. Bagno en-suite. Ci si arriva solo se si vuole essere trovati."
+    }
+  },
+  "outdoors": {
+    "eyebrow": "Esterni & piscina",
+    "title": "L'acqua, gli ulivi, il cielo",
+    "body": "La piscina a sfioro salata da 14×4 metri non ha un bordo — ha un orizzonte. Intorno: solarium con lettini, cucina esterna attrezzata per cene al tramonto, barbecue a gas, doccia esterna. E ulivi vecchi di secoli che fanno ombra senza chiedere permesso.",
+    "features": {
+      "pool": "Piscina a sfioro salata 14×4 m",
+      "solarium": "Solarium panoramico con lettini",
+      "kitchen": "Cucina esterna completamente attrezzata",
+      "bbq": "Barbecue a gas",
+      "shower": "Doccia esterna in zona piscina"
+    }
+  },
+  "amenities": {
+    "eyebrow": "Comfort",
+    "title": "Tutto il necessario, senza chiederlo",
+    "subtitle": "Ogni dettaglio è scelto perché l'unica cosa di cui occuparsi sia il tempo che passa.",
+    "items": {
+      "pool": "Piscina privata acqua salata",
+      "wifi": "Wi-Fi",
+      "ac": "Aria condizionata in ogni stanza",
+      "floor": "Riscaldamento/raffrescamento a pavimento",
+      "ventilation": "Ventilazione forzata",
+      "outdoorDining": "Area pranzo esterna coperta",
+      "speakers": "Altoparlanti Bluetooth",
+      "bbq": "Barbecue a gas",
+      "kitchen": "Cucina completamente attrezzata",
+      "dishwasher": "Lavastoviglie",
+      "washer": "Lavatrice",
+      "dryer": "Asciugatrice",
+      "coffee": "Macchina del caffè",
+      "kettle": "Bollitore",
+      "ice": "Macchina del ghiaccio",
+      "oven": "Forno",
+      "iron": "Ferro e asse da stiro",
+      "outdoorShower": "Doccia esterna",
+      "parking": "Parcheggio privato",
+      "gate": "Cancello automatico privato",
+      "hairdryer": "Asciugacapelli in ogni bagno",
+      "blackout": "Tende oscuranti",
+      "tv": "Smart TV",
+      "solar": "Impianto fotovoltaico",
+      "alarm": "Sistema d'allarme con vigilanza privata"
+    },
+    "note": "La videosorveglianza è disattivata durante il soggiorno degli ospiti."
+  },
+  "location": {
+    "eyebrow": "Posizione",
+    "title": "Tre borghi. Un sentiero. Il mare a 20 minuti.",
+    "body": "A 400 metri dal sentiero dell'Acquedotto Pugliese. Tre borghi bianchi a meno di 10 km. Il mare a 20 minuti. Gli aeroporti di Brindisi e Bari a meno di un'ora.",
+    "mapAlt": "Mappa della posizione di Casale La Cocca nella Valle d'Itria, tra Cisternino e Ostuni",
+    "distances": {
+      "title": "Distanze",
+      "cisternino": "Cisternino — 3 km · 5 min",
+      "martinaFranca": "Martina Franca — 7 km · 8 min",
+      "locorotondo": "Locorotondo — 9 km · 14 min",
+      "ostuni": "Ostuni — 18 km · 20 min",
+      "alberobello": "Alberobello — 18 km · 25 min",
+      "polignano": "Polignano a Mare — 41 km · 44 min",
+      "beach": "Spiaggia (Torre Canne) — 20 km · 25 min",
+      "golf": "Golf (Savelletri) — 27 km · 33 min",
+      "brindisi": "Aeroporto Brindisi — 57 km · 53 min",
+      "bari": "Aeroporto Bari — 93 km · 73 min"
+    }
+  },
+  "contact": {
+    "eyebrow": "Inizia a pianificare",
+    "title": "Hai le date in testa?",
+    "subtitle": "Raccontaci le vostre date. Vi risponderemo entro 24 ore con disponibilità e prezzi — senza impegno.",
+    "form": {
+      "name": "Nome e cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "checkin": "Data di arrivo",
+      "checkout": "Data di partenza",
+      "guests": "Numero di ospiti",
+      "message": "Messaggio",
+      "messagePlaceholder": "Occasione, domande, date flessibili…",
+      "consent": "Ho letto e accetto l'informativa sulla privacy (GDPR).",
+      "privacyLink": "Informativa privacy",
+      "submit": "Scrivi alla villa",
+      "sending": "Invio in corso…",
+      "required": "* campi obbligatori"
+    },
+    "states": {
+      "success": "Perfetto. Vi risponderemo entro 24 ore con disponibilità e prezzi.",
+      "error": "Qualcosa non ha funzionato. Riprova o scrivici direttamente via email o WhatsApp.",
+      "invalid": "Controlla i campi evidenziati e riprova."
+    },
+    "errors": {
+      "name": "Inserisci il tuo nome e cognome.",
+      "email": "Inserisci un indirizzo email valido.",
+      "phone": "Inserisci un numero di telefono.",
+      "consent": "Accetta l'informativa sulla privacy per continuare."
+    },
+    "alt": {
+      "title": "O scrivici direttamente",
+      "phone": "Telefono",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "floatingCta": {
+    "label": "Controlla disponibilità"
+  },
+  "testimonials": {
+    "eyebrow": "Chi ha soggiornato",
+    "t1": {
+      "text": "\"Una settimana sospesa nel tempo. La piscina a sfioro, la pietra, il silenzio — tutto rimanda a un'idea di lusso che non grida.\"",
+      "author": "— Famiglia M., Milano · estate 2024"
+    },
+    "t2": {
+      "text": "\"Abbiamo festeggiato un compleanno importante. La cucina esterna, il barbecue, la piscina al tramonto — è stato perfetto.\"",
+      "author": "— Gruppo di amici, Roma · luglio 2024"
+    },
+    "t3": {
+      "text": "\"La posizione è incredibile: quiete assoluta, ma in dieci minuti sei a Martina Franca. Torneremo.\"",
+      "author": "— Coppia, Londra · settembre 2024"
+    },
+    "disclaimer": "Testimonianze raccolte dalle piattaforme di prenotazione. I nomi sono stati abbreviati per privacy."
+  },
+  "footer": {
+    "tagline": "Pietra, ulivi, acqua. Valle d'Itria, Puglia.",
+    "cin": "CIN",
+    "contacts": "Contatti",
+    "follow": "Seguici",
+    "legal": "Note legali",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "photoCredit": "Fotografie di",
+    "rights": "Tutti i diritti riservati."
+  }
+}

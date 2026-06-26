@@ -1,0 +1,12 @@
+# Dipendenze
+node_modules/
+
+# Output di build per il deploy (rigenerata da `npm run build`)
+public/
+
+# Sistema
+.DS_Store
+
+# Log
+npm-debug.log*
+*.log

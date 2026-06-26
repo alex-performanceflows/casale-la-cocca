@@ -1,0 +1,121 @@
+/* Sorgente Tailwind: build -> assets/css/styles.css (vedi package.json) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================================
+   Custom layer — stili di base e componenti riutilizzabili del brand.
+   =========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Compensa la nav sticky quando si salta alle ancore */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream text-carbon font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    font-optical-sizing: auto;
+  }
+
+  /* Focus visibile e accessibile su tutti gli elementi interattivi */
+  :focus-visible {
+    @apply outline-none ring-2 ring-clay ring-offset-2 ring-offset-cream;
+  }
+
+  ::selection {
+    @apply bg-olive/20;
+  }
+}
+
+@layer components {
+  /* Etichetta in maiuscoletto (eyebrow) */
+  .eyebrow {
+    @apply inline-block text-xs font-semibold uppercase tracking-eyebrow text-olive;
+  }
+
+  /* Bottone primario (CTA) — terracotta, usata con parsimonia */
+  .btn-primary {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-clay px-7 py-3
+           text-sm font-medium uppercase tracking-widest text-cream
+           transition-colors duration-300 ease-soft hover:bg-clay/90;
+  }
+
+  /* Bottone secondario / ghost */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-carbon/25
+           px-7 py-3 text-sm font-medium uppercase tracking-widest text-carbon
+           transition-colors duration-300 ease-soft hover:border-carbon/60;
+  }
+
+  /* Contenitore di sezione standard */
+  .section {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+  }
+
+  /* Titolo di sezione */
+  .section-title {
+    @apply font-serif text-5xl leading-tight md:text-7xl;
+  }
+
+  /* Campo form */
+  .field {
+    @apply w-full rounded-sm border border-carbon/20 bg-white/70 px-4 py-3 text-base
+           text-carbon placeholder:text-carbon/40
+           transition-colors duration-200 focus:border-olive focus:ring-1 focus:ring-olive/30;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-carbon/80;
+  }
+}
+
+/* ===========================================================================
+   Microinterazioni — fade/slide-in allo scroll (vedi assets/js/reveal.js).
+   Rispetta prefers-reduced-motion.
+   =========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--tw-ease, cubic-bezier(0.22, 1, 0.36, 1)),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.22s; }
+.reveal-delay-3 { transition-delay: 0.34s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Scroll indicator dell'hero */
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+.scroll-indicator {
+  animation: nudge 2s ease-in-out infinite;
+}

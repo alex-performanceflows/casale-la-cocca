@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<!--
+  Casale La Cocca — one-pager (v1)
+  Stack: HTML statico + Tailwind CLI · i18n IT/EN via JSON · vanilla JS.
+  TODO_* raccolti in README.md.
+-->
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Casale La Cocca · Villa esclusiva · Valle d'Itria, Puglia</title>
+  <meta name="description" data-i18n-attr="content:meta.description"
+        content="Villa di lusso a uso esclusivo nella Valle d'Itria. 10 ospiti, 5 suite en-suite, piscina a sfioro salata 14 m." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Casale La Cocca" />
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="Casale La Cocca" />
+  <meta property="og:description" data-i18n-attr="content:meta.description" content="" />
+  <meta property="og:image" content="assets/img/hero-villa-pool-sunset.jpg" />
+  <meta property="og:url" content="https://TODO_DOMINIO/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n-attr="content:meta.title" content="Casale La Cocca" />
+  <meta name="twitter:description" data-i18n-attr="content:meta.description" content="" />
+  <meta name="twitter:image" content="assets/img/hero-villa-pool-sunset.jpg" />
+
+  <link rel="canonical" href="https://TODO_DOMINIO/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%235E6B4F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23F7F4EE' text-anchor='middle'%3ELC%3C/text%3E%3C/svg%3E" />
+
+  <!-- Tipografia: Fraunces + Inter (Google Fonts v1) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/img/hero-villa-pool-sunset.jpg" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- JSON-LD strutturati -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VacationRental",
+    "name": "Casale La Cocca",
+    "description": "Villa di lusso a uso esclusivo nella Valle d'Itria, tra Cisternino, Ostuni e Martina Franca.",
+    "url": "https://TODO_DOMINIO/",
+    "image": "assets/img/hero-villa-pool-sunset.jpg",
+    "identifier": { "@type": "PropertyValue", "name": "CIN", "value": "IT074005B400099613" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cisternino",
+      "addressRegion": "Puglia",
+      "addressCountry": "IT"
+    },
+    "containedInPlace": { "@type": "Place", "name": "Valle d'Itria" },
+    "petsAllowed": false,
+    "smokingAllowed": false,
+    "numberOfRooms": 5,
+    "occupancy": { "@type": "QuantitativeValue", "maxValue": 10 },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Private saltwater pool", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Outdoor kitchen", "value": true }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Skip link accessibilità -->
+  <a href="#top"
+     class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-clay focus:px-5 focus:py-3 focus:text-sm focus:text-cream focus:shadow-lg">
+    Vai al contenuto principale
+  </a>
+
+  <!-- ===== NAV ===== -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300 ease-soft">
+    <nav class="section grid grid-cols-3 items-center py-4" aria-label="Principale">
+      <!-- Sinistra: link di navigazione -->
+      <div class="hidden items-center gap-6 lg:flex" data-nav-text>
+        <a href="#overview" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.overview">La villa</a>
+        <a href="#gallery" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.gallery">Galleria</a>
+        <a href="#spaces" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.spaces">Gli spazi</a>
+        <a href="#outdoors" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.outdoors">Esterni</a>
+      </div>
+      <!-- Spazio vuoto su mobile (sinistra) -->
+      <div class="lg:hidden"></div>
+
+      <!-- Centro: logo -->
+      <a href="#top" class="flex items-center justify-self-center" data-nav-text>
+        <img src="assets/img/logo.svg" alt="Casale La Cocca" width="72" height="72"
+             class="h-16 w-16 object-cover" />
+      </a>
+
+      <!-- Destra: lingua + CTA + hamburger -->
+      <div class="flex items-center justify-end gap-3">
+        <div class="hidden items-center gap-6 lg:flex" data-nav-text>
+          <a href="#amenities" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.amenities">Comfort</a>
+          <a href="#location" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.location">Posizione</a>
+        </div>
+        <div class="flex items-center gap-1 text-sm" role="group" aria-label="Language" data-nav-text>
+          <button data-lang-btn="it" type="button" class="cursor-pointer px-1" aria-pressed="true">IT</button>
+          <span aria-hidden="true" class="opacity-30">/</span>
+          <button data-lang-btn="en" type="button" class="cursor-pointer px-1" aria-pressed="false">EN</button>
+        </div>
+        <a href="#contact" class="btn-primary hidden lg:inline-flex !px-5 !py-2 !text-xs whitespace-nowrap" data-i18n="nav.availability">Controlla disponibilità</a>
+        <button id="menu-toggle" type="button"
+                class="flex h-10 w-10 items-center justify-center lg:hidden" data-nav-text
+                aria-controls="mobile-menu" aria-expanded="false"
+                data-i18n-attr="aria-label:nav.menuOpen">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="fixed inset-0 z-[55] hidden flex-col bg-cream px-6 py-6 lg:hidden">
+    <div class="flex items-center justify-between">
+      <span class="flex items-center gap-2">
+        <img src="assets/img/logo.svg" alt="Casale La Cocca" width="64" height="64" class="h-14 w-14 object-cover" />
+      </span>
+      <button id="menu-close" type="button" class="flex h-10 w-10 items-center justify-center"
+              data-i18n-attr="aria-label:nav.menuClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="mt-10 flex flex-col gap-6 text-2xl font-serif" aria-label="Mobile">
+      <a href="#overview" data-mobile-link data-i18n="nav.overview">La villa</a>
+      <a href="#gallery" data-mobile-link data-i18n="nav.gallery">Galleria</a>
+      <a href="#spaces" data-mobile-link data-i18n="nav.spaces">Gli spazi</a>
+      <a href="#outdoors" data-mobile-link data-i18n="nav.outdoors">Esterni</a>
+      <a href="#amenities" data-mobile-link data-i18n="nav.amenities">Comfort</a>
+      <a href="#location" data-mobile-link data-i18n="nav.location">Posizione</a>
+      <a href="#contact" data-mobile-link data-i18n="nav.contact">Contatti</a>
+    </nav>
+    <a href="#contact" data-mobile-link class="btn-primary mt-auto w-full text-center" data-i18n="nav.availability">Controlla disponibilità</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== 1. HERO ===== -->
+    <section id="hero" class="relative flex h-[100svh] min-h-[600px] items-center justify-center overflow-hidden">
+      <img src="assets/img/hero-villa-pool-sunset.jpg"
+           class="absolute inset-0 h-full w-full object-cover"
+           fetchpriority="high" alt=""
+           data-i18n-attr="alt:hero.imageAlt" />
+      <!-- Gradient calibrato per la foto: più scuro in basso per testo leggibile -->
+      <div class="absolute inset-0 bg-gradient-to-b from-carbon/30 via-carbon/10 to-carbon/65"></div>
+
+      <div class="relative z-10 mx-auto max-w-3xl px-6 text-center text-cream">
+        <p class="eyebrow text-cream/80" data-i18n="hero.eyebrow">Valle d'Itria · Puglia</p>
+        <h1 class="mt-4 font-serif text-5xl leading-none sm:text-6xl md:text-7xl" data-i18n="hero.title">Casale La Cocca</h1>
+        <p class="mx-auto mt-6 max-w-xl text-lg text-cream/90 leading-relaxed" data-i18n="hero.subtitle">Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi, per tutto il tempo che volete.</p>
+        <p class="mt-3 text-sm uppercase tracking-widest text-cream/65" data-i18n="hero.location">Campagna tra Cisternino, Ostuni e Martina Franca</p>
+        <a href="#contact" class="btn-primary mt-9" data-i18n="hero.cta">Controlla disponibilità</a>
+      </div>
+
+      <a href="#overview" class="scroll-indicator absolute bottom-7 left-1/2 z-10 -translate-x-1/2 text-cream/80" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== PIATTAFORME STRIP ===== -->
+    <div class="border-b border-carbon/8 bg-cream">
+      <div class="section flex flex-wrap items-center justify-center gap-x-6 gap-y-2 py-4 text-xs text-carbon/45">
+        <span class="uppercase tracking-widest" data-i18n="platforms.label">Disponibile su</span>
+        <span aria-hidden="true" class="opacity-30">—</span>
+        <span class="font-medium text-carbon/60">Puglia Paradise</span>
+        <span aria-hidden="true" class="opacity-20">·</span>
+        <span class="font-medium text-carbon/60">Airbnb</span>
+        <span aria-hidden="true" class="opacity-20">·</span>
+        <span class="font-medium text-carbon/60">Hotels Apulia</span>
+        <span aria-hidden="true" class="opacity-20">·</span>
+        <span class="font-medium text-carbon/60">Agoda</span>
+      </div>
+    </div>
+
+    <!-- ===== 2. OVERVIEW ===== -->
+    <section id="overview" class="section py-16 md:py-24">
+      <div class="mx-auto max-w-prose text-center reveal">
+        <p class="eyebrow" data-i18n="overview.eyebrow">La villa</p>
+        <h2 class="section-title mt-4" data-i18n="overview.title">Un casale che insegna a rallentare</h2>
+        <p class="mt-6 text-lg leading-relaxed text-carbon/80" data-i18n="overview.body">Casale anni '50 riportato a nuova vita da artigiani locali…</p>
+      </div>
+
+      <dl class="mx-auto mt-14 grid max-w-4xl grid-cols-2 gap-x-6 gap-y-8 border-t border-carbon/10 pt-10 text-center md:grid-cols-5 reveal">
+        <div><dt class="font-serif text-3xl text-olive" data-i18n="overview.stats.guests">10 ospiti</dt></div>
+        <div><dt class="font-serif text-3xl text-olive" data-i18n="overview.stats.bedrooms">5 suite en-suite</dt></div>
+        <div><dt class="font-serif text-3xl text-olive" data-i18n="overview.stats.bathrooms">5,5 bagni</dt></div>
+        <div><dt class="font-serif text-3xl text-olive" data-i18n="overview.stats.pool">Piscina 14 m</dt></div>
+        <div><dt class="font-serif text-3xl text-olive" data-i18n="overview.stats.exclusive">Uso esclusivo</dt></div>
+      </dl>
+    </section>
+
+    <!-- ===== SEPARATORE FULL-BLEED — piscina aerea ===== -->
+    <div class="relative h-[50vh] min-h-[320px] overflow-hidden md:h-[60vh]">
+      <img src="assets/img/sep-pool-aerial.jpg"
+           loading="lazy" width="1600" height="900"
+           class="h-full w-full object-cover object-center"
+           alt="" aria-hidden="true" />
+      <div class="absolute inset-0 bg-carbon/25"></div>
+    </div>
+
+    <!-- ===== 3. GALLERIA ===== -->
+    <section id="gallery" class="bg-sand/40 py-16 md:py-24">
+      <div class="section">
+        <div class="max-w-prose reveal">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galleria</p>
+          <h2 class="section-title mt-4" data-i18n="gallery.title">Pietra, luce, acqua</h2>
+          <p class="mt-5 text-lg text-carbon/70" data-i18n="gallery.subtitle">Fotografie d'autore degli spazi e delle atmosfere.</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4 reveal">
+
+          <!-- BLOCCO 1: Hero piscina (2×2) + 4 quadrati piscina -->
+          <button type="button" data-gallery-item data-full="assets/img/hero-villa-pool-sunset.jpg"
+                  class="group relative col-span-2 row-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/hero-villa-pool-sunset.jpg" loading="eager" width="1200" height="900"
+                 class="aspect-[4/3] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Piscina a sfioro di Casale La Cocca al tramonto con la villa sullo sfondo" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/pool-day-panorama.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/pool-day-panorama.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Piscina a sfioro panoramica di giorno" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/pool-sunset-edge.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/pool-sunset-edge.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Bordo della piscina a sfioro al tramonto" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/pool-moon-night.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/pool-moon-night.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Piscina di notte sotto la luna piena" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/pool-olive-day.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/pool-olive-day.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Piscina con ulivo secolare riflesso nell'acqua" />
+          </button>
+
+          <!-- BLOCCO 2: Vista aerea full-width + notti e giardino -->
+          <button type="button" data-gallery-item data-full="assets/img/drone-top-aerial.jpg"
+                  class="group relative col-span-2 md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/drone-top-aerial.jpg" loading="lazy" width="1600" height="600"
+                 class="aspect-[16/6] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Vista dall'alto della villa, della piscina e del giardino tra gli ulivi" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/pool-elevated-night.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/pool-elevated-night.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Vista aerea della piscina illuminata di notte tra gli ulivi" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/pool-night-garden.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/pool-night-garden.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Piscina e giardino illuminati di notte" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/villa-night-moon.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/villa-night-moon.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Casale La Cocca di notte sotto la luna" />
+          </button>
+
+        </div><!-- /grid fold -->
+
+        <!-- Bottone "Vedi tutte" — visibile solo quando galleria chiusa -->
+        <div id="gallery-open-wrap" class="mt-8 flex justify-center reveal">
+          <button type="button" id="gallery-open"
+                  class="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-carbon/60 transition-colors hover:text-carbon cursor-pointer"
+                  aria-expanded="false" aria-controls="gallery-extra">
+            <span data-i18n="gallery.showAll">Vedi tutte le foto</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Foto extra (nascoste di default) -->
+        <div id="gallery-extra"
+             class="mt-3 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4 overflow-hidden transition-all duration-500"
+             style="max-height:0; opacity:0; pointer-events:none;">
+
+          <!-- BLOCCO 3: Esterni villa e giardino -->
+          <button type="button" data-gallery-item data-full="assets/img/villa-drone-exterior.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/villa-drone-exterior.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Vista drone dell'esterno della villa tra gli ulivi" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/villa-night-exterior.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/villa-night-exterior.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Villa di notte illuminata tra gli ulivi" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/garden-wildflowers.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/garden-wildflowers.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Giardino con fiori selvatici della macchia pugliese" />
+          </button>
+
+          <!-- BLOCCO 4: Interni e soggiorno -->
+          <button type="button" data-gallery-item data-full="assets/img/living-stone-arch.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/living-stone-arch.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Soggiorno aperto sulle volte in pietra calcarea" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/living-fireplace.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/living-fireplace.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Camino in pietra nel soggiorno della villa" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/interior-arch-living.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/interior-arch-living.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Archi in pietra viva originali del casale" />
+          </button>
+
+          <!-- BLOCCO 5: Pranzo e cucina -->
+          <button type="button" data-gallery-item data-full="assets/img/dining-stone-vault.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/dining-stone-vault.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Zona pranzo interna sotto le volte in pietra" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/outdoor-dining-night.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/outdoor-dining-night.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Tavola apparecchiata per la cena esterna notturna sotto i pergolati" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/kitchen-stone-arch.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/kitchen-stone-arch.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Cucina completamente attrezzata con archi in pietra originali" />
+          </button>
+
+          <!-- BLOCCO 6: Camere e suite -->
+          <button type="button" data-gallery-item data-full="assets/img/bedroom-stone-vault.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bedroom-stone-vault.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Camera da letto padronale con volta in pietra calcarea" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/bedroom-pool-glass.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bedroom-pool-glass.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Pool Suite con ampie vetrate affacciate sulla piscina" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/bedroom-garden-suite.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bedroom-garden-suite.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Garden Suite con accesso diretto al giardino e porte vetrate sul verde" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/bedroom-garden-suite-2.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bedroom-garden-suite-2.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Garden Suite — dettaglio della camera con luce naturale" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/bedroom-white-ensuite.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bedroom-white-ensuite.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Camera da letto bianca con bagno en-suite privato" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/bathroom-mosaic-basins.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bathroom-mosaic-basins.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Lavabi a mosaico artigianali nel bagno en-suite" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/bathroom-terracotta.jpg"
+                  class="group overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/bathroom-terracotta.jpg" loading="lazy" width="800" height="800"
+                 class="aspect-square h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Pavimento in terracotta tradizionale pugliese nel bagno" />
+          </button>
+          <button type="button" data-gallery-item data-full="assets/img/acquedotto-path.jpg"
+                  class="group relative col-span-2 overflow-hidden rounded-sm cursor-pointer">
+            <img src="assets/img/acquedotto-path.jpg" loading="lazy" width="1200" height="675"
+                 class="aspect-[16/9] h-full w-full object-cover transition duration-700 ease-soft group-hover:scale-[1.03]"
+                 alt="Sentiero dell'Acquedotto Pugliese a 400 m dalla villa" />
+          </button>
+
+          <!-- Bottone "Chiudi galleria" — in fondo alle foto extra -->
+          <div class="col-span-2 md:col-span-4 mt-2 flex justify-center">
+            <button type="button" id="gallery-close"
+                    class="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-carbon/60 transition-colors hover:text-carbon cursor-pointer">
+              <span data-i18n="gallery.showLess">Chiudi galleria</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M18 15l-6-6-6 6"/>
+              </svg>
+            </button>
+          </div>
+
+        </div><!-- /gallery-extra -->
+      </div>
+    </section>
+
+    <!-- ===== 4. GLI SPAZI ===== -->
+    <section id="spaces" class="section py-16 md:py-24">
+      <div class="max-w-prose reveal">
+        <p class="eyebrow" data-i18n="spaces.eyebrow">Gli spazi</p>
+        <h2 class="section-title mt-4" data-i18n="spaces.title">Quattro modi di abitare la villa</h2>
+        <p class="mt-5 text-lg text-carbon/70" data-i18n="spaces.subtitle">La casa principale e tre suite indipendenti, ciascuna con il proprio bagno en-suite.</p>
+      </div>
+
+      <div class="mt-14 grid gap-x-10 gap-y-14 md:grid-cols-2">
+        <article class="reveal reveal-delay-1">
+          <div class="overflow-hidden rounded-sm">
+            <img src="assets/img/living-stone-arch.jpg" loading="lazy" width="900" height="600"
+                 class="aspect-[3/2] w-full object-cover" alt="Soggiorno della casa principale con volte in pietra e camino" />
+          </div>
+          <h3 class="mt-5 font-serif text-2xl" data-i18n="spaces.casale.name">Casa principale</h3>
+          <p class="mt-2 text-carbon/75" data-i18n="spaces.casale.body">…</p>
+        </article>
+        <article class="reveal reveal-delay-2">
+          <div class="overflow-hidden rounded-sm">
+            <img src="assets/img/bedroom-pool-glass.jpg" loading="lazy" width="900" height="600"
+                 class="aspect-[3/2] w-full object-cover" alt="Pool Suite con vista sulla piscina attraverso le vetrate" />
+          </div>
+          <h3 class="mt-5 font-serif text-2xl" data-i18n="spaces.poolSuite.name">Pool Suite</h3>
+          <p class="mt-2 text-carbon/75" data-i18n="spaces.poolSuite.body">…</p>
+        </article>
+        <article class="reveal reveal-delay-1">
+          <div class="overflow-hidden rounded-sm">
+            <img src="assets/img/bedroom-garden-suite.jpg" loading="lazy" width="900" height="600"
+                 class="aspect-[3/2] w-full object-cover" alt="Garden Suite con interni bianchi e accesso al giardino" />
+          </div>
+          <h3 class="mt-5 font-serif text-2xl" data-i18n="spaces.gardenSuite.name">Garden Suite</h3>
+          <p class="mt-2 text-carbon/75" data-i18n="spaces.gardenSuite.body">…</p>
+        </article>
+        <article class="reveal reveal-delay-2">
+          <div class="overflow-hidden rounded-sm">
+            <img src="assets/img/bedroom-white-ensuite.jpg" loading="lazy" width="900" height="600"
+                 class="aspect-[3/2] w-full object-cover" alt="Suite al primo piano con letto matrimoniale e bagno en-suite aperto" />
+          </div>
+          <h3 class="mt-5 font-serif text-2xl" data-i18n="spaces.firstFloorSuite.name">Suite al primo piano</h3>
+          <p class="mt-2 text-carbon/75" data-i18n="spaces.firstFloorSuite.body">…</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SEPARATORE FULL-BLEED — villa drone ===== -->
+    <div class="relative h-[45vh] min-h-[280px] overflow-hidden md:h-[55vh]">
+      <img src="assets/img/sep-villa-drone.jpg"
+           loading="lazy" width="1600" height="900"
+           class="h-full w-full object-cover object-center"
+           alt="" aria-hidden="true" />
+      <div class="absolute inset-0 bg-carbon/15"></div>
+    </div>
+
+    <!-- ===== 5. ESTERNI & PISCINA ===== -->
+    <section id="outdoors" class="relative overflow-hidden">
+      <div class="grid md:grid-cols-2">
+        <div class="order-2 flex items-center bg-olive px-6 py-20 text-cream md:order-1 md:px-14">
+          <div class="mx-auto max-w-md reveal">
+            <p class="eyebrow text-cream/70" data-i18n="outdoors.eyebrow">Esterni & piscina</p>
+            <h2 class="section-title mt-4 text-cream" data-i18n="outdoors.title">L'acqua, gli ulivi, il cielo</h2>
+            <p class="mt-5 text-lg text-cream/85" data-i18n="outdoors.body">…</p>
+            <ul class="mt-8 space-y-3 text-cream/90">
+              <li class="flex items-start gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-clay"></span><span data-i18n="outdoors.features.pool">Piscina a sfioro salata 14×4 m</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-clay"></span><span data-i18n="outdoors.features.solarium">Solarium panoramico</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-clay"></span><span data-i18n="outdoors.features.kitchen">Cucina esterna attrezzata</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-clay"></span><span data-i18n="outdoors.features.bbq">Barbecue a gas</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-clay"></span><span data-i18n="outdoors.features.shower">Doccia esterna in zona piscina</span></li>
+            </ul>
+            <a href="#contact" class="btn-primary mt-10 border border-cream/20 bg-cream/10 hover:bg-cream/20" data-i18n="hero.cta">Controlla disponibilità</a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <img src="assets/img/pool-elevated-night.jpg" loading="lazy" width="900" height="1000"
+               class="h-72 w-full object-cover md:h-full"
+               alt="Vista aerea della piscina a sfioro di notte tra gli ulivi" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PULL QUOTE ===== -->
+    <div class="bg-cream border-t border-carbon/10 py-14 md:py-20">
+      <blockquote class="section mx-auto max-w-3xl text-center reveal">
+        <p class="font-serif text-3xl leading-snug text-carbon/85 md:text-4xl lg:text-5xl" data-i18n="pullquote.text">
+          "Il lusso vero non fa rumore. Fa luce."
+        </p>
+        <footer class="mt-6">
+          <cite class="eyebrow not-italic text-carbon/40" data-i18n="pullquote.attribution">Casale La Cocca, Valle d'Itria</cite>
+        </footer>
+      </blockquote>
+    </div>
+
+    <!-- ===== 6. COMFORT ===== -->
+    <section id="amenities" class="section border-t border-carbon/10 py-14 md:py-20">
+      <div class="max-w-prose reveal">
+        <p class="eyebrow" data-i18n="amenities.eyebrow">Comfort</p>
+        <h2 class="section-title mt-4" data-i18n="amenities.title">Tutto il necessario, senza chiederlo</h2>
+        <p class="mt-5 text-lg text-carbon/70" data-i18n="amenities.subtitle">Ogni dotazione è pensata perché la vacanza non si interrompa per motivi pratici.</p>
+      </div>
+
+      <ul class="mt-12 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 reveal">
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 14c2 1 4 1 6 0s4-1 6 0 4 1 6 0M3 18c2 1 4 1 6 0s4-1 6 0 4 1 6 0"/></svg><span data-i18n="amenities.items.pool">Piscina salata</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg><span data-i18n="amenities.items.wifi">Wi-Fi</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 7h16M4 12h16M7 17h10"/></svg><span data-i18n="amenities.items.ac">Aria condizionata</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg><span data-i18n="amenities.items.floor">Pavimento radiante</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg><span data-i18n="amenities.items.ventilation">Ventilazione</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 19V8l8-4 8 4v11M4 19h16"/></svg><span data-i18n="amenities.items.outdoorDining">Pranzo all'aperto</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 18V5l12-2v13M9 13l12-2"/><circle cx="6" cy="18" r="3"/></svg><span data-i18n="amenities.items.speakers">Altoparlanti Bluetooth</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 11h14l-1 9H6zM8 11V7a4 4 0 0 1 8 0v4"/></svg><span data-i18n="amenities.items.bbq">Barbecue a gas</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 3v18M6 8h6a3 3 0 0 0 0-6H6M18 3v18"/></svg><span data-i18n="amenities.items.kitchen">Cucina attrezzata</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="amenities.items.dishwasher">Lavastoviglie</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M9 6h.01"/></svg><span data-i18n="amenities.items.washer">Lavatrice</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 13l2 2 4-4"/></svg><span data-i18n="amenities.items.dryer">Asciugatrice</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM16 10h3a2 2 0 0 1 0 4h-3"/></svg><span data-i18n="amenities.items.coffee">Macchina caffè</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 8h10l-1 12H8zM9 8V5h6v3"/></svg><span data-i18n="amenities.items.kettle">Bollitore</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18"/></svg><span data-i18n="amenities.items.ice">Macchina ghiaccio</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M8 13h8"/></svg><span data-i18n="amenities.items.oven">Forno</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 16l3-8h7l3 5-4 3zM4 20h16"/></svg><span data-i18n="amenities.items.iron">Ferro da stiro</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3c4 5 4 9 0 18M8 7c2 3 2 6 0 9M16 7c-2 3-2 6 0 9"/></svg><span data-i18n="amenities.items.outdoorShower">Doccia esterna</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 11l7-6 7 6M6 10v9h12v-9"/></svg><span data-i18n="amenities.items.parking">Parcheggio privato</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M4 12h16M9 20v-5h6v5"/></svg><span data-i18n="amenities.items.gate">Cancello automatico</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 4l-2 8h4l-6 8 2-8H8z"/></svg><span data-i18n="amenities.items.hairdryer">Asciugacapelli</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="4" width="16" height="14" rx="1"/><path d="M4 9h16"/></svg><span data-i18n="amenities.items.blackout">Tende oscuranti</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8"/></svg><span data-i18n="amenities.items.tv">Smart TV</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="11" rx="1"/><path d="M3 8h18M3 11h18M8 4v11M13 4v11"/></svg><span data-i18n="amenities.items.solar">Fotovoltaico</span></li>
+        <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/></svg><span data-i18n="amenities.items.alarm">Allarme con vigilanza</span></li>
+      </ul>
+      <p class="mt-6 text-sm italic text-carbon/55 reveal" data-i18n="amenities.note">La videosorveglianza è disattivata durante il soggiorno.</p>
+    </section>
+
+    <!-- ===== 7. POSIZIONE ===== -->
+    <section id="location" class="bg-sand/40 py-16 md:py-24">
+      <div class="section grid items-start gap-12 md:grid-cols-2">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="location.eyebrow">Posizione</p>
+          <h2 class="section-title mt-4" data-i18n="location.title">Nel cuore della Valle d'Itria</h2>
+          <p class="mt-5 text-lg text-carbon/75" data-i18n="location.body">…</p>
+
+          <h3 class="mt-10 eyebrow" data-i18n="location.distances.title">Distanze</h3>
+          <ul class="mt-4 grid grid-cols-1 gap-y-2 text-carbon/80 sm:grid-cols-2 sm:gap-x-8">
+            <li data-i18n="location.distances.cisternino">Cisternino — 3 km · 5 min</li>
+            <li data-i18n="location.distances.martinaFranca">Martina Franca — 7 km · 8 min</li>
+            <li data-i18n="location.distances.locorotondo">Locorotondo — 9 km · 14 min</li>
+            <li data-i18n="location.distances.ostuni">Ostuni — 18 km · 20 min</li>
+            <li data-i18n="location.distances.alberobello">Alberobello — 18 km · 25 min</li>
+            <li data-i18n="location.distances.polignano">Polignano a Mare — 41 km · 44 min</li>
+            <li data-i18n="location.distances.beach">Spiaggia (Torre Canne) — 20 km · 25 min</li>
+            <li data-i18n="location.distances.golf">Golf (Savelletri) — 27 km · 33 min</li>
+            <li data-i18n="location.distances.brindisi">Aeroporto Brindisi — 57 km · 53 min</li>
+            <li data-i18n="location.distances.bari">Aeroporto Bari — 93 km · 73 min</li>
+          </ul>
+        </div>
+
+        <div class="overflow-hidden rounded-sm border border-carbon/10 reveal">
+          <iframe
+            title="Mappa — Casale La Cocca, Valle d'Itria"
+            class="h-[340px] w-full md:h-[460px]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=40.7456,17.4209&z=14&output=embed"
+            allowfullscreen=""
+            style="border:0;">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIANZE ===== -->
+    <section class="bg-sand/40 py-14 md:py-20">
+      <div class="section">
+        <p class="eyebrow text-center" data-i18n="testimonials.eyebrow">Chi ha soggiornato</p>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+          <figure class="reveal flex flex-col gap-4 rounded-sm bg-cream p-8">
+            <div class="flex gap-1 text-clay" aria-label="5 stelle su 5">
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <blockquote class="flex-1 font-serif text-lg leading-relaxed text-carbon/85" data-i18n="testimonials.t1.text">"Una settimana sospesa nel tempo. La piscina a sfioro, la pietra, il silenzio — tutto rimanda a un'idea di lusso che non grida."</blockquote>
+            <figcaption class="text-sm text-carbon/50" data-i18n="testimonials.t1.author">— Famiglia M., Milano · estate 2024</figcaption>
+          </figure>
+          <figure class="reveal reveal-delay-1 flex flex-col gap-4 rounded-sm bg-cream p-8">
+            <div class="flex gap-1 text-clay" aria-label="5 stelle su 5">
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <blockquote class="flex-1 font-serif text-lg leading-relaxed text-carbon/85" data-i18n="testimonials.t2.text">"Abbiamo festeggiato un compleanno importante. La cucina esterna, il barbecue, la piscina al tramonto — è stato perfetto."</blockquote>
+            <figcaption class="text-sm text-carbon/50" data-i18n="testimonials.t2.author">— Gruppo di amici, Roma · luglio 2024</figcaption>
+          </figure>
+          <figure class="reveal reveal-delay-2 flex flex-col gap-4 rounded-sm bg-cream p-8">
+            <div class="flex gap-1 text-clay" aria-label="5 stelle su 5">
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <blockquote class="flex-1 font-serif text-lg leading-relaxed text-carbon/85" data-i18n="testimonials.t3.text">"La posizione è incredibile: quiete assoluta, ma in dieci minuti sei a Martina Franca. Torneremo."</blockquote>
+            <figcaption class="text-sm text-carbon/50" data-i18n="testimonials.t3.author">— Coppia, Londra · settembre 2024</figcaption>
+          </figure>
+        </div>
+        <p class="mt-6 text-center text-xs text-carbon/40" data-i18n="testimonials.disclaimer">Testimonianze raccolte dalle piattaforme di prenotazione. I nomi sono stati abbreviati per privacy.</p>
+      </div>
+    </section>
+
+    <!-- ===== 9. CONTATTI / FORM ===== -->
+    <section id="contact" class="section py-16 md:py-24">
+      <div class="grid gap-12 md:grid-cols-2">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Prenota o chiedi informazioni</p>
+          <h2 class="section-title mt-4" data-i18n="contact.title">Hai le date in testa?</h2>
+          <p class="mt-5 text-lg text-carbon/75" data-i18n="contact.subtitle">Scrivici: verifichiamo disponibilità e prezzi e ti rispondiamo entro 24 ore.</p>
+
+          <div class="mt-10">
+            <p class="eyebrow" data-i18n="contact.alt.title">Preferisci un contatto diretto?</p>
+            <ul class="mt-4 space-y-2 text-carbon/80">
+              <li><a class="underline-offset-4 hover:underline" href="tel:TODO_TELEFONO"><span data-i18n="contact.alt.phone">Telefono</span>: TODO_TELEFONO</a></li>
+              <li><a class="underline-offset-4 hover:underline" href="https://wa.me/TODO_WHATSAPP" target="_blank" rel="noopener"><span data-i18n="contact.alt.whatsapp">WhatsApp</span></a></li>
+              <li><a class="underline-offset-4 hover:underline" href="mailto:TODO_EMAIL_PROPRIETARIO"><span data-i18n="contact.alt.email">Email</span>: TODO_EMAIL_PROPRIETARIO</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <form id="inquiry-form" class="reveal"
+              data-endpoint="TODO_FORM_ENDPOINT"
+              data-owner-email="TODO_EMAIL_PROPRIETARIO"
+              novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label class="field-label" for="f-name" data-i18n="contact.form.name">Nome e cognome</label>
+              <input class="field" type="text" id="f-name" name="name" autocomplete="name" required />
+              <p data-error-for="name" class="mt-1 hidden text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label class="field-label" for="f-email" data-i18n="contact.form.email">Email</label>
+              <input class="field" type="email" id="f-email" name="email" autocomplete="email" required />
+              <p data-error-for="email" class="mt-1 hidden text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label class="field-label" for="f-phone" data-i18n="contact.form.phone">Telefono</label>
+              <input class="field" type="tel" id="f-phone" name="phone" autocomplete="tel" required />
+              <p data-error-for="phone" class="mt-1 hidden text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label class="field-label" for="f-checkin" data-i18n="contact.form.checkin">Data di arrivo</label>
+              <input class="field" type="date" id="f-checkin" name="checkin" />
+            </div>
+            <div>
+              <label class="field-label" for="f-checkout" data-i18n="contact.form.checkout">Data di partenza</label>
+              <input class="field" type="date" id="f-checkout" name="checkout" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="field-label" for="f-guests" data-i18n="contact.form.guests">Numero di ospiti</label>
+              <input class="field" type="number" id="f-guests" name="guests" min="1" max="10" inputmode="numeric" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="field-label" for="f-message" data-i18n="contact.form.message">Messaggio</label>
+              <textarea class="field min-h-[120px]" id="f-message" name="message"
+                        data-i18n-attr="placeholder:contact.form.messagePlaceholder"></textarea>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="flex items-start gap-3 text-sm text-carbon/80">
+                <input type="checkbox" id="f-consent" name="consent"
+                       class="mt-1 h-4 w-4 cursor-pointer rounded border-carbon/30 text-olive focus:ring-olive" required />
+                <span>
+                  <span data-i18n="contact.form.consent">Accetto l'informativa sulla privacy (GDPR).</span>
+                  <a href="#privacy" class="underline underline-offset-2" data-i18n="contact.form.privacyLink">Informativa privacy</a>
+                </span>
+              </label>
+              <p data-error-for="consent" class="mt-1 hidden text-sm text-red-600"></p>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <button type="submit" class="btn-primary">
+              <span data-submit-label data-i18n="contact.form.submit">Invia richiesta</span>
+            </button>
+            <span class="text-xs text-carbon/50" data-i18n="contact.form.required">* campi obbligatori</span>
+          </div>
+
+          <p data-form-status role="status" aria-live="polite" class="mt-4 hidden text-sm font-medium"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-carbon text-cream/80">
+    <div class="section grid gap-10 py-16 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <p class="font-serif text-2xl text-cream">Casale La Cocca</p>
+        <p class="mt-3 max-w-sm text-sm text-cream/65" data-i18n="footer.tagline">Villa di lusso a uso esclusivo nella Valle d'Itria.</p>
+        <p class="mt-4 text-xs uppercase tracking-widest text-cream/45">
+          <span data-i18n="footer.cin">CIN</span>: IT074005B400099613
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/60" data-i18n="footer.contacts">Contatti</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a class="hover:text-cream" href="tel:TODO_TELEFONO">TODO_TELEFONO</a></li>
+          <li><a class="hover:text-cream" href="mailto:TODO_EMAIL_PROPRIETARIO">TODO_EMAIL_PROPRIETARIO</a></li>
+          <li><a class="hover:text-cream" href="https://wa.me/TODO_WHATSAPP" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/60" data-i18n="footer.legal">Note legali</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a id="privacy" class="hover:text-cream" href="#privacy" data-i18n="footer.privacy">Privacy policy</a></li>
+          <li><a class="hover:text-cream" href="#cookies" data-i18n="footer.cookies">Cookie policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section flex flex-col gap-2 border-t border-cream/10 py-6 text-xs text-cream/45 md:flex-row md:items-center md:justify-between">
+      <p>© <span id="year">2026</span> Casale La Cocca. <span data-i18n="footer.rights">Tutti i diritti riservati.</span></p>
+      <p><span data-i18n="footer.photoCredit">Fotografie di</span> TODO_NOME_FOTOGRAFO</p>
+    </div>
+  </footer>
+
+  <!-- Floating CTA pill — appare dopo aver scrollato oltre l'hero -->
+  <div id="floating-cta" aria-hidden="true"
+       class="fixed bottom-6 left-1/2 z-40 -translate-x-1/2 transition-all duration-500 opacity-0 pointer-events-none"
+       style="transform: translateX(-50%) translateY(12px);">
+    <a href="#contact" class="btn-primary shadow-lg focus:outline-none focus:ring-2 focus:ring-clay/40"
+       data-i18n="floatingCta.label">Controlla disponibilità</a>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav scroll behavior
+    (function () {
+      var header = document.getElementById('site-header');
+      var navTexts = document.querySelectorAll('[data-nav-text]');
+      function onScroll() {
+        var solid = window.scrollY > 40;
+        header.classList.toggle('bg-cream/95', solid);
+        header.classList.toggle('backdrop-blur', solid);
+        header.classList.toggle('shadow-sm', solid);
+        header.classList.toggle('text-cream', !solid);
+        header.classList.toggle('text-carbon', solid);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
+    // Floating CTA — mostra dopo hero
+    (function () {
+      var pill = document.getElementById('floating-cta');
+      var hero = document.getElementById('hero');
+      if (!pill || !hero) return;
+      function updatePill() {
+        var pastHero = window.scrollY > hero.offsetHeight * 0.8;
+        pill.style.opacity = pastHero ? '1' : '0';
+        pill.style.transform = 'translateX(-50%) translateY(' + (pastHero ? '0' : '12px') + ')';
+        pill.style.pointerEvents = pastHero ? 'auto' : 'none';
+        pill.setAttribute('aria-hidden', String(!pastHero));
+      }
+      updatePill();
+      window.addEventListener('scroll', updatePill, { passive: true });
+    })();
+
+    // Menu mobile
+    (function () {
+      var menu = document.getElementById('mobile-menu');
+      var open = document.getElementById('menu-toggle');
+      var close = document.getElementById('menu-close');
+      function setOpen(isOpen) {
+        menu.classList.toggle('hidden', !isOpen);
+        menu.classList.toggle('flex', isOpen);
+        open.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+      open.addEventListener('click', function () { setOpen(true); });
+      close.addEventListener('click', function () { setOpen(false); });
+      document.querySelectorAll('[data-mobile-link]').forEach(function (a) {
+        a.addEventListener('click', function () { setOpen(false); });
+      });
+    })();
+
+    // Date minima check-in = oggi
+    (function () {
+      var checkin = document.getElementById('f-checkin');
+      var checkout = document.getElementById('f-checkout');
+      if (!checkin) return;
+      var today = new Date().toISOString().split('T')[0];
+      checkin.min = today;
+      checkin.addEventListener('change', function () {
+        if (checkout) checkout.min = checkin.value || today;
+      });
+    })();
+  </script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script>
+    (function () {
+      var btnOpen = document.getElementById('gallery-open');
+      var btnOpenWrap = document.getElementById('gallery-open-wrap');
+      var btnClose = document.getElementById('gallery-close');
+      var extra = document.getElementById('gallery-extra');
+      if (!btnOpen || !btnClose || !extra) return;
+
+      function openGallery() {
+        extra.style.maxHeight = '9999px';
+        extra.style.opacity = '1';
+        extra.style.pointerEvents = 'auto';
+        btnOpenWrap.style.display = 'none';
+        btnOpen.setAttribute('aria-expanded', 'true');
+        // Aggiorna label "Chiudi" con la lingua corrente
+        var closeLabel = btnClose.querySelector('[data-i18n]');
+        if (closeLabel && window.__i18n && window.__i18n.t) {
+          closeLabel.textContent = window.__i18n.t('gallery.showLess') || 'Chiudi galleria';
+        }
+      }
+
+      function closeGallery() {
+        extra.style.maxHeight = '0';
+        extra.style.opacity = '0';
+        extra.style.pointerEvents = 'none';
+        btnOpenWrap.style.display = 'flex';
+        btnOpen.setAttribute('aria-expanded', 'false');
+        // Aggiorna label "Vedi tutte" con la lingua corrente
+        var openLabel = btnOpen.querySelector('[data-i18n]');
+        if (openLabel && window.__i18n && window.__i18n.t) {
+          openLabel.textContent = window.__i18n.t('gallery.showAll') || 'Vedi tutte le foto';
+        }
+        document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      btnOpen.addEventListener('click', openGallery);
+      btnClose.addEventListener('click', closeGallery);
+
+      // Aggiorna le label quando cambia la lingua
+      document.addEventListener('i18n:applied', function () {
+        var openLabel = btnOpen.querySelector('[data-i18n]');
+        var closeLabel = btnClose.querySelector('[data-i18n]');
+        if (openLabel && window.__i18n && window.__i18n.t)
+          openLabel.textContent = window.__i18n.t('gallery.showAll') || 'Vedi tutte le foto';
+        if (closeLabel && window.__i18n && window.__i18n.t)
+          closeLabel.textContent = window.__i18n.t('gallery.showLess') || 'Chiudi galleria';
+      });
+    })();
+  </script>
+</body>
+</html>

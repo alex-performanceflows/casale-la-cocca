@@ -1,0 +1,16 @@
+{
+  "name": "casale-la-cocca",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Casale La Cocca — one-pager (v1 mock-up). HTML statico + Tailwind, bilingue IT/EN.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
+    "build": "npm run build:css && node ./scripts/build-static.mjs",
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch",
+    "serve": "npx --yes serve -l 5173 .",
+    "dev": "npm run watch & npm run serve"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

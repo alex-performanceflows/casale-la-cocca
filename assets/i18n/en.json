@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "Casale La Cocca · Exclusive luxury villa · Itria Valley, Puglia",
+    "description": "A stone farmhouse in the Itria Valley, entirely yours. 5 en-suite suites, saltwater infinity pool, exclusive use. Between Cisternino and Ostuni — 20 minutes from the sea."
+  },
+  "nav": {
+    "overview": "The villa",
+    "gallery": "Gallery",
+    "spaces": "The spaces",
+    "outdoors": "Outdoors & pool",
+    "amenities": "Comfort",
+    "location": "Location",
+    "contact": "Contact",
+    "availability": "Request availability",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "langLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "Itria Valley · Puglia",
+    "title": "Casale La Cocca",
+    "subtitle": "Five suites, a pool on the horizon, a 1950s stone farmhouse. Just you — for as long as you want to stay.",
+    "location": "In the countryside between Cisternino, Ostuni and Martina Franca",
+    "cta": "Request availability",
+    "scroll": "Scroll",
+    "imageAlt": "The infinity pool at Casale La Cocca at dusk, with the stone farmhouse beyond"
+  },
+  "platforms": {
+    "label": "Also on",
+    "verified": "verified property"
+  },
+  "overview": {
+    "eyebrow": "The villa",
+    "title": "A farmhouse that teaches you to slow down",
+    "body": "Set among the olive groves of Cisternino, restored by local craftsmen who kept everything: the limestone vaults, the traditional tiled floors, the walls that hold the cool of summer. Outside, a 14-metre infinity pool. Inside, five en-suite suites and spaces that ask nothing — except that you stay.",
+    "stats": {
+      "guests": "Sleeps 10",
+      "bedrooms": "5 en-suite suites",
+      "bathrooms": "5.5 bathrooms",
+      "pool": "14 m infinity pool",
+      "exclusive": "Exclusive use"
+    }
+  },
+  "pullquote": {
+    "text": "True luxury makes no noise. It makes light.",
+    "attribution": "Itria Valley, Puglia"
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "Stone, light, water",
+    "subtitle": "Author photography of the spaces and the light that moves through them.",
+    "open": "Open full-screen gallery",
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image",
+    "counter": "{current} of {total}",
+    "showAll": "View all photos",
+    "showLess": "Close gallery"
+  },
+  "spaces": {
+    "eyebrow": "The spaces",
+    "title": "Four ways to live the villa",
+    "subtitle": "The main stone house and three independent suites — each with its own en-suite bathroom, each with its own character.",
+    "casale": {
+      "name": "Main house",
+      "body": "The heart of the villa: stone vaults, a living room with fireplace, an open kitchen with original arches. Two master en-suite suites. The sitting room opens directly onto pool and garden — inside and outside blur together."
+    },
+    "poolSuite": {
+      "name": "Pool Suite",
+      "body": "Waking up with water in front of your eyes. Wide glass doors open onto the pool and garden — the distance from bed to water is measured in seconds. En-suite bathroom."
+    },
+    "gardenSuite": {
+      "name": "Garden Suite",
+      "body": "Doors onto the green, light filtering through the olive trees. A ground-floor suite with direct access to the garden. Puglia comes into the room. En-suite bathroom."
+    },
+    "firstFloorSuite": {
+      "name": "First-floor suite",
+      "body": "A private external staircase, a terrace entirely your own. From above: the outline of the olive trees and the blue of the pool. En-suite bathroom. You come here when you want to be found."
+    }
+  },
+  "outdoors": {
+    "eyebrow": "Outdoors & pool",
+    "title": "Water, olive trees, sky",
+    "body": "The 14×4-metre saltwater infinity pool has no edge — it has a horizon. Around it: a sun deck with loungers, a fully equipped outdoor kitchen for sunset dinners, a gas barbecue, and centuries-old olive trees that cast shade without asking permission.",
+    "features": {
+      "pool": "14×4 m saltwater infinity pool",
+      "solarium": "Panoramic sun deck with loungers",
+      "kitchen": "Fully equipped outdoor kitchen",
+      "bbq": "Gas barbecue",
+      "shower": "Outdoor shower by the pool"
+    }
+  },
+  "amenities": {
+    "eyebrow": "Comfort",
+    "title": "Everything you need, without asking",
+    "subtitle": "Every detail chosen so the only thing on your mind is time.",
+    "items": {
+      "pool": "Private saltwater pool",
+      "wifi": "Wi-Fi",
+      "ac": "Air conditioning in every room",
+      "floor": "Underfloor heating and cooling",
+      "ventilation": "Forced ventilation",
+      "outdoorDining": "Covered outdoor dining area",
+      "speakers": "Bluetooth speakers",
+      "bbq": "Gas barbecue",
+      "kitchen": "Fully equipped kitchen",
+      "dishwasher": "Dishwasher",
+      "washer": "Washing machine",
+      "dryer": "Tumble dryer",
+      "coffee": "Coffee machine",
+      "kettle": "Kettle",
+      "ice": "Ice maker",
+      "oven": "Oven",
+      "iron": "Iron and ironing board",
+      "outdoorShower": "Outdoor shower",
+      "parking": "Private parking",
+      "gate": "Private automatic gate",
+      "hairdryer": "Hairdryer in every bathroom",
+      "blackout": "Blackout blinds",
+      "tv": "Smart TV",
+      "solar": "Photovoltaic system",
+      "alarm": "Alarm with private security"
+    },
+    "note": "Video surveillance is switched off during your stay."
+  },
+  "location": {
+    "eyebrow": "Location",
+    "title": "Three hill towns. A walking path. The sea in 20 minutes.",
+    "body": "400 metres from the Apulian Aqueduct walking and cycling path. Three whitewashed hill towns within 10 km. The sea 20 minutes away. Brindisi and Bari airports within the hour.",
+    "mapAlt": "Map of Casale La Cocca's location in the Itria Valley, between Cisternino and Ostuni",
+    "distances": {
+      "title": "Distances",
+      "cisternino": "Cisternino — 3 km · 5 min",
+      "martinaFranca": "Martina Franca — 7 km · 8 min",
+      "locorotondo": "Locorotondo — 9 km · 14 min",
+      "ostuni": "Ostuni — 18 km · 20 min",
+      "alberobello": "Alberobello — 18 km · 25 min",
+      "polignano": "Polignano a Mare — 41 km · 44 min",
+      "beach": "Beach (Torre Canne) — 20 km · 25 min",
+      "golf": "Golf (Savelletri) — 27 km · 33 min",
+      "brindisi": "Brindisi Airport — 57 km · 53 min",
+      "bari": "Bari Airport — 93 km · 73 min"
+    }
+  },
+  "contact": {
+    "eyebrow": "Start planning",
+    "title": "Got the dates in mind?",
+    "subtitle": "Tell us when you'd like to come. We'll reply within 24 hours with availability and pricing — no commitment needed.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "checkin": "Arrival date",
+      "checkout": "Departure date",
+      "guests": "Number of guests",
+      "message": "Message",
+      "messagePlaceholder": "Occasion, questions, flexible dates…",
+      "consent": "I have read and accept the privacy policy (GDPR).",
+      "privacyLink": "Privacy policy",
+      "submit": "Write to the villa",
+      "sending": "Sending…",
+      "required": "* required fields"
+    },
+    "states": {
+      "success": "Perfect. We'll reply within 24 hours with availability and pricing.",
+      "error": "Something went wrong. Please try again or reach us directly by email or WhatsApp.",
+      "invalid": "Please check the highlighted fields and try again."
+    },
+    "errors": {
+      "name": "Please enter your full name.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a phone number.",
+      "consent": "Please accept the privacy policy to continue."
+    },
+    "alt": {
+      "title": "Or reach us directly",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "floatingCta": {
+    "label": "Check availability"
+  },
+  "testimonials": {
+    "eyebrow": "What guests say",
+    "t1": {
+      "text": "\"A week suspended in time. The infinity pool, the stone, the silence — everything speaks of a luxury that doesn't shout.\"",
+      "author": "— Family M., Milan · summer 2024"
+    },
+    "t2": {
+      "text": "\"We celebrated a milestone birthday here. The outdoor kitchen, the barbecue, the pool at sunset — it was perfect.\"",
+      "author": "— Group of friends, Rome · July 2024"
+    },
+    "t3": {
+      "text": "\"The location is incredible: total quiet, but Martina Franca is ten minutes away. We'll be back.\"",
+      "author": "— Couple, London · September 2024"
+    },
+    "disclaimer": "Reviews collected from booking platforms. Names have been abbreviated for privacy."
+  },
+  "footer": {
+    "tagline": "Stone, olive trees, water. Itria Valley, Puglia.",
+    "cin": "CIN",
+    "contacts": "Contact",
+    "follow": "Follow",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "photoCredit": "Photography by",
+    "rights": "All rights reserved."
+  }
+}
