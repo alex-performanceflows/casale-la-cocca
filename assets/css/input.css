@@ -9,8 +9,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Compensa la nav sticky quando si salta alle ancore */
     scroll-padding-top: 5rem;
+    overflow-x: hidden;
   }
 
   body {
