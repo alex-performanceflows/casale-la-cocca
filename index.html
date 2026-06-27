@@ -870,44 +870,46 @@
         else if (e.key === 'ArrowRight') { nudge(1); }
       });
 
-      // Swipe / trascinamento con la foto che segue il dito (touch e mouse)
-      var startX = 0, startY = 0, dragging = false, axis = null, width = 1;
+      // Swipe / trascinamento con la foto che segue il dito.
+      // Pointer Events: unico modello per touch/mouse/pen, niente eventi
+      // "fantasma" che con touch+mouse separati rompevano gli swipe successivi.
+      var startX = 0, startY = 0, dragging = false, axis = null, width = 1, activeId = null;
 
       // Posiziona il track durante il trascinamento (px), senza transizione.
       function drag(extraPx) {
         track.style.transform = 'translateX(' + (-current * width + extraPx) + 'px)';
       }
-      function begin(x, y) {
-        dragging = true; axis = null; startX = x; startY = y;
+      function begin(e) {
+        if (dragging) return;
+        dragging = true; axis = null; activeId = e.pointerId;
+        startX = e.clientX; startY = e.clientY;
         width = track.offsetWidth || track.clientWidth || 1;
         stop();
         track.style.transition = 'none'; // segue il dito senza inerzia
+        try { track.setPointerCapture(e.pointerId); } catch (_) {}
       }
-      function move(x, y) {
-        if (!dragging) return;
-        var dx = x - startX, dy = y - startY;
+      function move(e) {
+        if (!dragging || e.pointerId !== activeId) return;
+        var dx = e.clientX - startX, dy = e.clientY - startY;
         if (axis === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
           axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y'; // orizzontale o scroll verticale
         }
         if (axis === 'x') drag(dx);
       }
-      function finish(x) {
-        if (!dragging) return;
-        dragging = false;
+      function finish(e) {
+        if (!dragging || (e && e.pointerId !== activeId)) return;
+        dragging = false; activeId = null;
         track.style.transition = ''; // ripristina la transizione morbida (snap)
-        var dx = x - startX;
+        var dx = (e ? e.clientX : startX) - startX;
         if (axis === 'x' && Math.abs(dx) > width * 0.12) advance(dx < 0 ? 1 : -1);
         else render(); // sotto soglia o scroll verticale: torna in posizione
         start();
       }
 
-      track.addEventListener('touchstart', function (e) { begin(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
-      track.addEventListener('touchmove',  function (e) { move(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
-      track.addEventListener('touchend',   function (e) { finish((e.changedTouches[0] || {}).clientX != null ? e.changedTouches[0].clientX : startX); }, { passive: true });
-      track.addEventListener('touchcancel', function () { finish(startX); }, { passive: true });
-      track.addEventListener('mousedown', function (e) { e.preventDefault(); begin(e.clientX, e.clientY); });
-      window.addEventListener('mousemove', function (e) { move(e.clientX, e.clientY); });
-      window.addEventListener('mouseup', function (e) { finish(e.clientX); });
+      track.addEventListener('pointerdown', begin);
+      track.addEventListener('pointermove', move);
+      track.addEventListener('pointerup', finish);
+      track.addEventListener('pointercancel', finish);
 
       render();
       start();
