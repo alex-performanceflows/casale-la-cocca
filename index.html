@@ -85,8 +85,13 @@
         <a href="#spaces" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.spaces">Gli spazi</a>
         <a href="#outdoors" class="text-sm tracking-wide transition-opacity hover:opacity-70" data-i18n="nav.outdoors">Esterni</a>
       </div>
-      <!-- Spazio vuoto su mobile (sinistra) -->
-      <div class="lg:hidden"></div>
+      <!-- Mobile (sinistra): hamburger -->
+      <button id="menu-toggle" type="button"
+              class="flex h-10 w-10 items-center justify-center justify-self-start lg:hidden" data-nav-text
+              aria-controls="mobile-menu" aria-expanded="false"
+              data-i18n-attr="aria-label:nav.menuOpen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
 
       <!-- Centro: logo -->
       <a href="#top" class="flex items-center justify-self-center" data-nav-text>
@@ -106,12 +111,6 @@
           <button data-lang-btn="en" type="button" class="cursor-pointer px-1" aria-pressed="false">EN</button>
         </div>
         <a href="#contact" class="hidden lg:inline-flex text-xs tracking-wide uppercase border border-current px-4 py-2 rounded-sm transition-opacity hover:opacity-70 whitespace-nowrap" data-i18n="nav.availability">Controlla disponibilità</a>
-        <button id="menu-toggle" type="button"
-                class="flex h-10 w-10 items-center justify-center lg:hidden" data-nav-text
-                aria-controls="mobile-menu" aria-expanded="false"
-                data-i18n-attr="aria-label:nav.menuOpen">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
       </div>
     </nav>
   </header>
