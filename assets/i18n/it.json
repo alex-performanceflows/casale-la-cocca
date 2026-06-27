@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Casale La Cocca · Villa esclusiva · Valle d'Itria, Puglia",
-    "description": "Casale in pietra nella Valle d'Itria, solo per voi. 5 suite en-suite, piscina a sfioro salata, uso esclusivo. Tra Cisternino e Ostuni, a 20 minuti dal mare."
+    "title": "Casale La Cocca · Villa esclusiva a uso privato · Valle d'Itria, Puglia",
+    "description": "Un casale in pietra del '50 nella Valle d'Itria, interamente vostro. Cinque suite en-suite, piscina a sfioro salata, uso esclusivo. Tra Cisternino e Ostuni, nel cuore della Puglia più autentica."
   },
   "nav": {
     "overview": "La villa",
@@ -19,7 +19,7 @@
   "hero": {
     "eyebrow": "Valle d'Itria · Puglia",
     "title": "Casale La Cocca",
-    "subtitle": "Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi, per tutto il tempo che volete.",
+    "subtitle": "Pietra del '50, ulivi centenari, una piscina che scompare nell'orizzonte. Interamente vostro.",
     "location": "Campagna tra Cisternino, Ostuni e Martina Franca",
     "cta": "Richiedi disponibilità",
     "scroll": "Scorri",
@@ -31,8 +31,8 @@
   },
   "overview": {
     "eyebrow": "La villa",
-    "title": "Un casale che insegna a rallentare",
-    "body": "Sorge tra gli ulivi di Cisternino, ristrutturato da artigiani locali che hanno conservato tutto: le volte in pietra calcarea, i pavimenti a mattonelle tradizionali, le pareti che tengono il fresco. Fuori, una piscina a sfioro lunga 14 metri. Dentro, cinque suite con bagno privato e spazi che non chiedono niente, tranne di stare.",
+    "title": "Dove il tempo si misura diversamente",
+    "body": "Un casale degli anni '50 restituito alla sua essenza da artigiani locali. Le volte in pietra calcarea, i pavimenti a mattonelle, le pareti spesse che tengono il fresco d'estate. Fuori, quattordici metri di acqua salata che si perdono nel paesaggio. Dentro, cinque suite con bagno privato e stanze che non chiedono niente, tranne di restare.",
     "stats": {
       "guests": "10 ospiti",
       "bedrooms": "5 suite en-suite",
@@ -47,7 +47,7 @@
   "gallery": {
     "eyebrow": "Galleria",
     "title": "Pietra, luce, acqua",
-    "subtitle": "Fotografie d'autore degli spazi e della luce che li attraversa.",
+    "subtitle": "Fotografie d'autore. Ogni scatto è un tempo del giorno che non si ripete uguale.",
     "open": "Apri la galleria a schermo intero",
     "close": "Chiudi",
     "prev": "Immagine precedente",
@@ -59,28 +59,28 @@
   "spaces": {
     "eyebrow": "Gli spazi",
     "title": "Quattro modi di abitare la villa",
-    "subtitle": "La casa principale in pietra e tre suite indipendenti, ciascuna con il proprio bagno en-suite, ciascuna con il proprio carattere.",
+    "subtitle": "La casa principale e tre suite indipendenti. Ciascuna con il proprio carattere, ciascuna con il proprio bagno en-suite. Nessun corridoio in comune, nessun vicino di stanza.",
     "casale": {
       "name": "Casa principale",
-      "body": "Il cuore della villa: volte in pietra, soggiorno con camino, cucina a vista con archi originali. Due suite padronali en-suite. Il salone si apre direttamente su piscina e giardino: dentro e fuori si confondono."
+      "body": "Il cuore della villa. Volte in pietra calcarea, soggiorno con camino, cucina a vista incorniciata dagli archi originali. Due suite padronali en-suite. Il salone si apre su piscina e giardino senza soluzione di continuità: il dentro e il fuori si confondono."
     },
     "poolSuite": {
       "name": "Pool Suite",
-      "body": "Svegliarsi con l'acqua davanti agli occhi. Le grandi vetrate si aprono sulla piscina e sul giardino: la distanza tra il letto e l'acqua si misura in secondi. Bagno en-suite."
+      "body": "Svegliarsi con l'acqua davanti agli occhi. Le vetrate si aprono sulla piscina e sul verde: la distanza tra il letto e l'acqua si misura in passi, non in minuti. Bagno en-suite."
     },
     "gardenSuite": {
       "name": "Garden Suite",
-      "body": "Porte che danno sul verde, luce che filtra tra gli ulivi. Suite al piano terra con accesso diretto al giardino. La Puglia entra nelle stanze. Bagno en-suite."
+      "body": "Porte vetrate sul giardino, luce filtrata tra gli ulivi, aria che sa di pietra calda. Suite al piano terra con accesso diretto all'esterno. La Puglia entra nella stanza. Bagno en-suite."
     },
     "firstFloorSuite": {
       "name": "Suite al primo piano",
-      "body": "Scala esterna privata, terrazza tutta vostra. Dall'alto, il profilo degli ulivi e il blu della piscina. Bagno en-suite. Ci si arriva solo se si vuole essere trovati."
+      "body": "Scala esterna privata, terrazza tutta vostra. Dall'alto il profilo degli ulivi, il blu della piscina, il silenzio. Bagno en-suite. Ci si arriva solo se si vuole essere trovati."
     }
   },
   "outdoors": {
     "eyebrow": "Esterni & piscina",
     "title": "L'acqua, gli ulivi, il cielo",
-    "body": "La piscina a sfioro salata da 14×4 metri non ha un bordo, ha un orizzonte. Intorno: solarium con lettini, cucina esterna attrezzata per cene al tramonto, barbecue a gas, doccia esterna. E ulivi vecchi di secoli che fanno ombra senza chiedere permesso.",
+    "body": "La piscina a sfioro salata da 14×4 metri non ha un bordo, ha un orizzonte. Intorno: un solarium panoramico, una cucina esterna attrezzata per cene che durano fino a notte, un barbecue a gas, una doccia esterna. E ulivi vecchi di secoli che fanno ombra senza chiedere permesso.",
     "features": {
       "pool": "Piscina a sfioro salata 14×4 m",
       "solarium": "Solarium panoramico con lettini",
@@ -91,13 +91,13 @@
   },
   "amenities": {
     "eyebrow": "Comfort",
-    "title": "Tutto il necessario, senza chiederlo",
-    "subtitle": "Ogni dettaglio è scelto perché l'unica cosa di cui occuparsi sia il tempo che passa.",
+    "title": "Niente manca. Niente disturba.",
+    "subtitle": "Ogni dettaglio è stato pensato perché l'unica cosa di cui occuparsi sia la qualità del tempo che passa.",
     "items": {
       "pool": "Piscina privata acqua salata",
       "wifi": "Wi-Fi",
       "ac": "Aria condizionata in ogni stanza",
-      "floor": "Riscaldamento/raffrescamento a pavimento",
+      "floor": "Riscaldamento e raffrescamento a pavimento",
       "ventilation": "Ventilazione forzata",
       "outdoorDining": "Area pranzo esterna coperta",
       "speakers": "Altoparlanti Bluetooth",
@@ -125,7 +125,7 @@
   "location": {
     "eyebrow": "Posizione",
     "title": "Tre borghi. Un sentiero. Il mare a 20 minuti.",
-    "body": "A 400 metri dal sentiero dell'Acquedotto Pugliese. Tre borghi bianchi a meno di 10 km. Il mare a 20 minuti. Gli aeroporti di Brindisi e Bari a meno di un'ora.",
+    "body": "Nel cuore della Valle d'Itria, a 400 metri dal sentiero dell'Acquedotto Pugliese. Cisternino, Locorotondo, Martina Franca a meno di 10 km. Ostuni a 20 minuti. Il mare di Torre Canne alla stessa distanza. Isolati dal mondo, ma mai lontani da esso.",
     "mapAlt": "Mappa della posizione di Casale La Cocca nella Valle d'Itria, tra Cisternino e Ostuni",
     "distances": {
       "title": "Distanze",
@@ -142,9 +142,9 @@
     }
   },
   "contact": {
-    "eyebrow": "Inizia a pianificare",
-    "title": "Hai le date in testa?",
-    "subtitle": "Raccontaci le vostre date. Vi risponderemo entro 24 ore con disponibilità e prezzi, senza impegno.",
+    "eyebrow": "Pianificate il vostro soggiorno",
+    "title": "Avete già le date in mente?",
+    "subtitle": "Scriveteci. Vi risponderemo entro 24 ore con disponibilità e tariffe. Nessun impegno, nessuna fretta.",
     "form": {
       "name": "Nome e cognome",
       "email": "Email",
@@ -156,12 +156,12 @@
       "messagePlaceholder": "Occasione, domande, date flessibili…",
       "consent": "Ho letto e accetto l'informativa sulla privacy (GDPR).",
       "privacyLink": "Informativa privacy",
-      "submit": "Scrivi alla villa",
+      "submit": "Invia la richiesta",
       "sending": "Invio in corso…",
       "required": "* campi obbligatori"
     },
     "states": {
-      "success": "Perfetto. Vi risponderemo entro 24 ore con disponibilità e prezzi.",
+      "success": "Grazie. Vi risponderemo entro 24 ore con disponibilità e tariffe.",
       "error": "Qualcosa non ha funzionato. Riprova o scrivici direttamente via email o WhatsApp.",
       "invalid": "Controlla i campi evidenziati e riprova."
     },
@@ -172,14 +172,14 @@
       "consent": "Accetta l'informativa sulla privacy per continuare."
     },
     "alt": {
-      "title": "O scrivici direttamente",
+      "title": "Preferite scriverci direttamente?",
       "phone": "Telefono",
       "whatsapp": "WhatsApp",
       "email": "Email"
     }
   },
   "floatingCta": {
-    "label": "Controlla disponibilità"
+    "label": "Verifica disponibilità"
   },
   "testimonials": {
     "eyebrow": "Chi ha soggiornato",

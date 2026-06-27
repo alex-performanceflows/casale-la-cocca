@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Casale La Cocca · Exclusive luxury villa · Itria Valley, Puglia",
-    "description": "A stone farmhouse in the Itria Valley, entirely yours. 5 en-suite suites, saltwater infinity pool, exclusive use. Between Cisternino and Ostuni, 20 minutes from the sea."
+    "title": "Casale La Cocca · Exclusive private villa · Itria Valley, Puglia",
+    "description": "A 1950s stone farmhouse in the Itria Valley, entirely yours. Five en-suite suites, saltwater infinity pool, exclusive use. Between Cisternino and Ostuni, in the heart of authentic Puglia."
   },
   "nav": {
     "overview": "The villa",
@@ -19,7 +19,7 @@
   "hero": {
     "eyebrow": "Itria Valley · Puglia",
     "title": "Casale La Cocca",
-    "subtitle": "Five suites, a pool on the horizon, a 1950s stone farmhouse. Just you, for as long as you want to stay.",
+    "subtitle": "1950s stone, centuries-old olive trees, a pool that dissolves into the horizon. Entirely yours.",
     "location": "In the countryside between Cisternino, Ostuni and Martina Franca",
     "cta": "Request availability",
     "scroll": "Scroll",
@@ -31,8 +31,8 @@
   },
   "overview": {
     "eyebrow": "The villa",
-    "title": "A farmhouse that teaches you to slow down",
-    "body": "Set among the olive groves of Cisternino, restored by local craftsmen who kept everything: the limestone vaults, the traditional tiled floors, the walls that hold the cool of summer. Outside, a 14-metre infinity pool. Inside, five en-suite suites and spaces that ask nothing, except that you stay.",
+    "title": "Where time moves differently",
+    "body": "A farmhouse from the 1950s, returned to its essence by local craftsmen. Limestone vaults, traditional tiled floors, thick walls that hold the summer cool. Outside, fourteen metres of saltwater that disappear into the landscape. Inside, five suites with private bathrooms and rooms that ask only one thing: that you stay.",
     "stats": {
       "guests": "Sleeps 10",
       "bedrooms": "5 en-suite suites",
@@ -47,7 +47,7 @@
   "gallery": {
     "eyebrow": "Gallery",
     "title": "Stone, light, water",
-    "subtitle": "Author photography of the spaces and the light that moves through them.",
+    "subtitle": "Author photography. Every image is a time of day that never repeats itself.",
     "open": "Open full-screen gallery",
     "close": "Close",
     "prev": "Previous image",
@@ -59,28 +59,28 @@
   "spaces": {
     "eyebrow": "The spaces",
     "title": "Four ways to live the villa",
-    "subtitle": "The main stone house and three independent suites, each with its own en-suite bathroom, each with its own character.",
+    "subtitle": "The main house and three independent suites. Each with its own character, each with its own en-suite bathroom. No shared corridors, no neighbouring rooms.",
     "casale": {
       "name": "Main house",
-      "body": "The heart of the villa: stone vaults, a living room with fireplace, an open kitchen with original arches. Two master en-suite suites. The sitting room opens directly onto pool and garden: inside and outside blur together."
+      "body": "The heart of the villa. Limestone vaults, a living room with fireplace, an open kitchen framed by the original arches. Two master en-suite suites. The sitting room opens onto the pool and garden without interruption: inside and outside become the same place."
     },
     "poolSuite": {
       "name": "Pool Suite",
-      "body": "Waking up with water in front of your eyes. Wide glass doors open onto the pool and garden: the distance from bed to water is measured in seconds. En-suite bathroom."
+      "body": "Waking up with water in front of your eyes. The glass doors open onto the pool and garden: the distance from bed to water is counted in steps, not minutes. En-suite bathroom."
     },
     "gardenSuite": {
       "name": "Garden Suite",
-      "body": "Doors onto the green, light filtering through the olive trees. A ground-floor suite with direct access to the garden. Puglia comes into the room. En-suite bathroom."
+      "body": "Glass doors onto the garden, light filtered through olive trees, air that smells of warm stone. A ground-floor suite with direct access to the outdoors. Puglia comes into the room. En-suite bathroom."
     },
     "firstFloorSuite": {
       "name": "First-floor suite",
-      "body": "A private external staircase, a terrace entirely your own. From above: the outline of the olive trees and the blue of the pool. En-suite bathroom. You come here when you want to be found."
+      "body": "A private external staircase, a terrace entirely your own. From above: the silhouette of the olive trees, the blue of the pool, the silence. En-suite bathroom. You only find this place if you want to be found."
     }
   },
   "outdoors": {
     "eyebrow": "Outdoors & pool",
     "title": "Water, olive trees, sky",
-    "body": "The 14×4-metre saltwater infinity pool has no edge, it has a horizon. Around it: a sun deck with loungers, a fully equipped outdoor kitchen for sunset dinners, a gas barbecue, and centuries-old olive trees that cast shade without asking permission.",
+    "body": "The 14×4-metre saltwater infinity pool has no edge, it has a horizon. Around it: a panoramic sun deck, an outdoor kitchen equipped for dinners that last into the night, a gas barbecue, an outdoor shower. And centuries-old olive trees that give shade without being asked.",
     "features": {
       "pool": "14×4 m saltwater infinity pool",
       "solarium": "Panoramic sun deck with loungers",
@@ -91,8 +91,8 @@
   },
   "amenities": {
     "eyebrow": "Comfort",
-    "title": "Everything you need, without asking",
-    "subtitle": "Every detail chosen so the only thing on your mind is time.",
+    "title": "Nothing missing. Nothing intrudes.",
+    "subtitle": "Every detail has been chosen so that the only thing on your mind is the quality of the time passing.",
     "items": {
       "pool": "Private saltwater pool",
       "wifi": "Wi-Fi",
@@ -125,7 +125,7 @@
   "location": {
     "eyebrow": "Location",
     "title": "Three hill towns. A walking path. The sea in 20 minutes.",
-    "body": "400 metres from the Apulian Aqueduct walking and cycling path. Three whitewashed hill towns within 10 km. The sea 20 minutes away. Brindisi and Bari airports within the hour.",
+    "body": "In the heart of the Itria Valley, 400 metres from the Apulian Aqueduct path. Cisternino, Locorotondo, Martina Franca within 10 km. Ostuni in 20 minutes. The sea at Torre Canne in the same. Removed from the world, but never far from it.",
     "mapAlt": "Map of Casale La Cocca's location in the Itria Valley, between Cisternino and Ostuni",
     "distances": {
       "title": "Distances",
@@ -142,9 +142,9 @@
     }
   },
   "contact": {
-    "eyebrow": "Start planning",
-    "title": "Got the dates in mind?",
-    "subtitle": "Tell us when you'd like to come. We'll reply within 24 hours with availability and pricing, no commitment needed.",
+    "eyebrow": "Plan your stay",
+    "title": "Have the dates in mind?",
+    "subtitle": "Write to us. We'll reply within 24 hours with availability and rates. No commitment, no rush.",
     "form": {
       "name": "Full name",
       "email": "Email",
@@ -156,12 +156,12 @@
       "messagePlaceholder": "Occasion, questions, flexible dates…",
       "consent": "I have read and accept the privacy policy (GDPR).",
       "privacyLink": "Privacy policy",
-      "submit": "Write to the villa",
+      "submit": "Send enquiry",
       "sending": "Sending…",
       "required": "* required fields"
     },
     "states": {
-      "success": "Perfect. We'll reply within 24 hours with availability and pricing.",
+      "success": "Thank you. We'll reply within 24 hours with availability and rates.",
       "error": "Something went wrong. Please try again or reach us directly by email or WhatsApp.",
       "invalid": "Please check the highlighted fields and try again."
     },
@@ -172,7 +172,7 @@
       "consent": "Please accept the privacy policy to continue."
     },
     "alt": {
-      "title": "Or reach us directly",
+      "title": "Prefer to write directly?",
       "phone": "Phone",
       "whatsapp": "WhatsApp",
       "email": "Email"
