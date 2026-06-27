@@ -68,7 +68,7 @@
   </script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
   <!-- Skip link accessibilità -->
   <a href="#top"
      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-clay focus:px-5 focus:py-3 focus:text-sm focus:text-cream focus:shadow-lg">
@@ -91,7 +91,7 @@
       <!-- Centro: logo -->
       <a href="#top" class="flex items-center justify-self-center" data-nav-text>
         <img src="assets/img/logo.svg" alt="Casale La Cocca" width="72" height="72"
-             class="h-16 w-16 object-cover" />
+             id="nav-logo" class="h-16 w-16 object-cover transition-[filter] duration-300" />
       </a>
 
       <!-- Destra: lingua + CTA + hamburger -->
@@ -105,7 +105,7 @@
           <span aria-hidden="true" class="opacity-30">/</span>
           <button data-lang-btn="en" type="button" class="cursor-pointer px-1" aria-pressed="false">EN</button>
         </div>
-        <a href="#contact" class="btn-primary hidden lg:inline-flex !px-5 !py-2 !text-xs whitespace-nowrap" data-i18n="nav.availability">Controlla disponibilità</a>
+        <a href="#contact" class="hidden lg:inline-flex text-xs tracking-wide uppercase border border-current px-4 py-2 rounded-sm transition-opacity hover:opacity-70 whitespace-nowrap" data-i18n="nav.availability">Controlla disponibilità</a>
         <button id="menu-toggle" type="button"
                 class="flex h-10 w-10 items-center justify-center lg:hidden" data-nav-text
                 aria-controls="mobile-menu" aria-expanded="false"
@@ -143,20 +143,32 @@
 
     <!-- ===== 1. HERO ===== -->
     <section id="hero" class="relative flex h-[100svh] min-h-[600px] items-center justify-center overflow-hidden">
-      <img src="assets/img/hero-villa-pool-sunset.jpg"
-           class="absolute inset-0 h-full w-full object-cover"
-           fetchpriority="high" alt=""
-           data-i18n-attr="alt:hero.imageAlt" />
-      <!-- Gradient calibrato per la foto: più scuro in basso per testo leggibile -->
+      <!-- Slider immagini hero -->
+      <div id="hero-slider" class="absolute inset-0">
+        <img src="assets/img/hero-villa-pool-sunset.jpg"   class="hero-slide absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-1000" fetchpriority="high" alt="" />
+        <img src="assets/img/pool-sunset-edge.jpg"          class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0  transition-opacity duration-1000" loading="lazy" alt="" />
+        <img src="assets/img/pool-elevated-night.jpg"       class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0  transition-opacity duration-1000" loading="lazy" alt="" />
+        <img src="assets/img/villa-drone-exterior.jpg"      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0  transition-opacity duration-1000" loading="lazy" alt="" />
+        <img src="assets/img/pool-day-panorama.jpg"         class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0  transition-opacity duration-1000" loading="lazy" alt="" />
+      </div>
       <div class="absolute inset-0 bg-carbon/55"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-carbon/20 via-transparent to-carbon/40"></div>
 
       <div class="relative z-10 mx-auto max-w-3xl px-6 text-center text-cream">
         <p class="eyebrow text-cream/80" data-i18n="hero.eyebrow">Valle d'Itria · Puglia</p>
         <h1 class="mt-4 font-serif text-5xl leading-none sm:text-6xl md:text-7xl" data-i18n="hero.title">Casale La Cocca</h1>
-        <p class="mx-auto mt-6 max-w-xl text-lg text-cream/90 leading-relaxed" data-i18n="hero.subtitle">Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi, per tutto il tempo che volete.</p>
-        <p class="mt-3 text-sm uppercase tracking-widest text-cream/65" data-i18n="hero.location">Campagna tra Cisternino, Ostuni e Martina Franca</p>
-        <a href="#contact" class="btn-primary mt-9" data-i18n="hero.cta">Controlla disponibilità</a>
+        <p class="mx-auto mt-6 max-w-xl text-base sm:text-lg text-cream/90 leading-relaxed hidden sm:block" data-i18n="hero.subtitle">Cinque suite, una piscina sull'orizzonte, un casale in pietra del '50. Solo voi, per tutto il tempo che volete.</p>
+        <p class="mt-3 text-sm uppercase tracking-widest text-cream/65 hidden sm:block" data-i18n="hero.location">Campagna tra Cisternino, Ostuni e Martina Franca</p>
+        <a href="#contact" class="btn-primary mt-9 hidden sm:inline-flex" data-i18n="hero.cta">Controlla disponibilità</a>
+      </div>
+
+      <!-- Indicatori slider -->
+      <div class="absolute bottom-16 left-1/2 z-10 -translate-x-1/2 flex gap-2" aria-hidden="true">
+        <button type="button" class="hero-dot w-1.5 h-1.5 rounded-full bg-cream transition-opacity" style="opacity:1"></button>
+        <button type="button" class="hero-dot w-1.5 h-1.5 rounded-full bg-cream transition-opacity" style="opacity:0.35"></button>
+        <button type="button" class="hero-dot w-1.5 h-1.5 rounded-full bg-cream transition-opacity" style="opacity:0.35"></button>
+        <button type="button" class="hero-dot w-1.5 h-1.5 rounded-full bg-cream transition-opacity" style="opacity:0.35"></button>
+        <button type="button" class="hero-dot w-1.5 h-1.5 rounded-full bg-cream transition-opacity" style="opacity:0.35"></button>
       </div>
 
       <a href="#overview" class="scroll-indicator absolute bottom-7 left-1/2 z-10 -translate-x-1/2 text-cream/80" aria-hidden="true">
@@ -755,7 +767,7 @@
     // Nav scroll behavior
     (function () {
       var header = document.getElementById('site-header');
-      var navTexts = document.querySelectorAll('[data-nav-text]');
+      var logo = document.getElementById('nav-logo');
       function onScroll() {
         var solid = window.scrollY > 40;
         header.classList.toggle('bg-cream/95', solid);
@@ -763,9 +775,30 @@
         header.classList.toggle('shadow-sm', solid);
         header.classList.toggle('text-cream', !solid);
         header.classList.toggle('text-carbon', solid);
+        if (logo) logo.style.filter = solid ? '' : 'invert(1) brightness(2)';
       }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
+    // Hero slider
+    (function () {
+      var slides = document.querySelectorAll('.hero-slide');
+      var dots = document.querySelectorAll('.hero-dot');
+      if (slides.length < 2) return;
+      var current = 0;
+      function goTo(n) {
+        slides[current].style.opacity = '0';
+        dots[current].style.opacity = '0.35';
+        current = n % slides.length;
+        slides[current].style.opacity = '1';
+        dots[current].style.opacity = '1';
+      }
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); clearInterval(timer); timer = setInterval(next, 5000); });
+      });
+      function next() { goTo((current + 1) % slides.length); }
+      var timer = setInterval(next, 5000);
     })();
 
     // Floating CTA — mostra dopo hero
