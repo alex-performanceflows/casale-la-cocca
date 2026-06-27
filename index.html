@@ -538,7 +538,14 @@
         <p class="mt-5 text-lg text-carbon/70" data-i18n="amenities.subtitle">Ogni dotazione è pensata perché la vacanza non si interrompa per motivi pratici.</p>
       </div>
 
-      <ul class="mt-12 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 reveal">
+      <!-- Strip foto comfort -->
+      <div class="mt-10 grid grid-cols-3 gap-3 reveal">
+        <img src="assets/img/outdoor-dining-night.jpg" loading="lazy" alt="" class="h-40 w-full object-cover rounded-sm md:h-52" />
+        <img src="assets/img/kitchen-stone-arch.jpg"   loading="lazy" alt="" class="h-40 w-full object-cover rounded-sm md:h-52" />
+        <img src="assets/img/living-fireplace.jpg"     loading="lazy" alt="" class="h-40 w-full object-cover rounded-sm md:h-52" />
+      </div>
+
+      <ul class="mt-10 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 reveal">
         <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 14c2 1 4 1 6 0s4-1 6 0 4 1 6 0M3 18c2 1 4 1 6 0s4-1 6 0 4 1 6 0"/></svg><span data-i18n="amenities.items.pool">Piscina salata</span></li>
         <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg><span data-i18n="amenities.items.wifi">Wi-Fi</span></li>
         <li class="flex items-center gap-3 border-b border-carbon/10 py-3"><svg class="h-5 w-5 flex-none text-olive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 7h16M4 12h16M7 17h10"/></svg><span data-i18n="amenities.items.ac">Aria condizionata</span></li>
@@ -567,6 +574,12 @@
       </ul>
       <p class="mt-6 text-sm italic text-carbon/55 reveal" data-i18n="amenities.note">La videosorveglianza è disattivata durante il soggiorno.</p>
     </section>
+
+    <!-- ===== SEPARATORE FULL-BLEED — acquedotto ===== -->
+    <div class="h-[50vh] min-h-[280px] overflow-hidden">
+      <img src="assets/img/acquedotto-path.jpg" loading="lazy" alt=""
+           class="h-full w-full object-cover object-center" />
+    </div>
 
     <!-- ===== 7. POSIZIONE ===== -->
     <section id="location" class="bg-sand/40 py-16 md:py-24">
@@ -649,8 +662,15 @@
     </section>
 
     <!-- ===== 9. CONTATTI / FORM ===== -->
-    <section id="contact" class="section py-16 md:py-24">
-      <div class="grid gap-12 md:grid-cols-2">
+    <section id="contact" class="py-16 md:py-24">
+      <div class="grid md:grid-cols-2">
+        <!-- Foto sinistra desktop -->
+        <div class="hidden md:block">
+          <img src="assets/img/pool-moon-night.jpg" loading="lazy" alt=""
+               class="h-full w-full object-cover" />
+        </div>
+        <!-- Contenuto destra -->
+        <div class="section md:pl-16 md:pr-10 grid gap-12 md:grid-cols-1">
         <div class="reveal">
           <p class="eyebrow" data-i18n="contact.eyebrow">Prenota o chiedi informazioni</p>
           <h2 class="section-title mt-4" data-i18n="contact.title">Hai le date in testa?</h2>
@@ -725,6 +745,7 @@
 
           <p data-form-status role="status" aria-live="polite" class="mt-4 hidden text-sm font-medium"></p>
         </form>
+        </div>
       </div>
     </section>
   </main>
