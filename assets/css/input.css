@@ -112,9 +112,11 @@
 }
 
 /* Scroll indicator dell'hero */
+/* translateX(-50%) preserva la centratura orizzontale (.left-1/2):
+   senza, l'animazione sovrascrive il -translate-x-1/2 di Tailwind. */
 @keyframes nudge {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(6px); opacity: 1; }
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
 }
 .scroll-indicator {
   animation: nudge 2s ease-in-out infinite;
