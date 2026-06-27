@@ -880,7 +880,9 @@
         track.style.transform = 'translateX(' + (-current * width + extraPx) + 'px)';
       }
       function begin(e) {
-        if (dragging) return;
+        if (!e.isPrimary) return; // ignora i tocchi secondari (multi-touch)
+        // Riparte sempre pulito: un eventuale gesto rimasto "appeso"
+        // (es. mousedown fantasma dopo il touch) non deve bloccare i successivi.
         dragging = true; axis = null; activeId = e.pointerId;
         startX = e.clientX; startY = e.clientY;
         width = track.offsetWidth || track.clientWidth || 1;
