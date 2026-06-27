@@ -64,8 +64,8 @@
       var active = btn.getAttribute('data-lang-btn') === lang;
       btn.setAttribute('aria-pressed', String(active));
       btn.classList.toggle('font-semibold', active);
-      btn.classList.toggle('text-carbon', active);
-      btn.classList.toggle('text-carbon/50', !active);
+      btn.classList.toggle('opacity-100', active);
+      btn.classList.toggle('opacity-40', !active);
     });
   }
 

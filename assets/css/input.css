@@ -59,7 +59,7 @@
 
   /* Titolo di sezione */
   .section-title {
-    @apply font-serif text-5xl leading-tight md:text-7xl;
+    @apply font-serif text-3xl leading-tight md:text-5xl;
   }
 
   /* Campo form */
